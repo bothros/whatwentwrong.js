@@ -203,12 +203,17 @@ techlevels: [
     "Total Throwback",
     "Cave Dweller",
     "Cave Dweller",
+    "Cave Dweller",
+    "Cave Dweller",
     "Savage Tribesman",
     "Savage Tribesman",
     "Savage Tribesman",
-    "Nyarlathotepan",
-    "Nyarlathotepan",
-    "Nyarlathotepan",
+    "Savage Tribesman",
+    "Savage Tribesman",
+    "Nyarlathotepite",
+    "Nyarlathotepite",
+    "Nyarlathotepite",
+    "Nyarlathotepite",
     "Badass Metal Viking",
     "Badass Metal Viking",
     "Arcology Fugitive"
@@ -225,7 +230,7 @@ stuffbytechlevel: {
         "big wicker shield",
         "loincloth"
         ],
-    "Nyarlathotepan": [
+    "Nyarlathotepite": [
         "bronze khopesh",
         "bronze shield",
         "shortbow",
@@ -281,7 +286,15 @@ stuffbytechlevel: {
     "a bunch of dried witchroot",
     "dowsing rod",
     "9 foot pole of fibrous fungal matter",
-    "partially functional head of an ancient, insane robot"
+    "partially functional head of an ancient, insane robot",
+    //New stuff starts here
+    "a strangely elliptical gold diadem, it doesn't quite fit a human head",
+    "an air-bladder, removed from the gizzard of a dinosaur",
+    "a bear-skin",
+    "the severed arm of a Voormi, one of the hairy men of the mountains",
+    "a space alien grenade. Roll on the table", //TODO: incorporate grenade table
+    "a child slave",
+    "a bone whistle"
     ],
 
     backgrounds: [
