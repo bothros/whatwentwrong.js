@@ -199,6 +199,38 @@ qx.Class.define("whatwentwrong.Table", {
         ],
         
         //random generation functions
+        checkforpsionics: function(CHA, INT, WIS) {
+            var chance = 0;
+            if (INT == 15) {
+                chance += .01;
+            } else if (INT == 16) {
+                chance += .02;
+            } else if (INT == 17) {
+                chance += .03;
+            } else if (INT == 18) {
+                chance += .04;
+            }
+            if (WIS == 15) {
+                chance += .005;
+            } else if (WIS == 16) {
+                chance += .01;
+            } else if (WIS == 17) {
+                chance += .015;
+            } else if (WIS == 18) {
+                chance += .02;
+            }
+            if (CHA == 15) {
+                chance += .015;
+            } else if (CHA == 16) {
+                chance += .03;
+            } else if (CHA == 17) {
+                chance += .045;
+            } else if (CHA == 18) {
+                chance += .06;
+            }
+            return this.chanceroll(chance);
+        },
+
         chanceroll: function(threshold) {
             var roll = Math.random();
 

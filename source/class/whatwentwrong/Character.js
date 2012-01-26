@@ -117,6 +117,12 @@ qx.Class.define("whatwentwrong.Character", {
             check: "Number",
             event: "changeWISmod",
             init: -1000
+        },
+        psionic: {
+            check: "Boolean",
+            event: "changePsionic",
+            nullable: true,
+            init: null
         }
     },
 
@@ -148,7 +154,15 @@ qx.Class.define("whatwentwrong.Character", {
             outstring += this.stringStats();
             outstring += this.stringStuff();
             outstring += this.stringBackground();
+            outstring += this.stringPsionic();
             return outstring;
+        },
+        stringPsionic: function() {
+            if (this.getPsionic()) {
+                return "You are psionic!\n";
+            } else {
+                return "";
+            }
         },
         stringStats: function() {
             var outstring = "";
@@ -237,8 +251,8 @@ qx.Class.define("whatwentwrong.Character", {
             this.getStuff().push(table.select(table.deckostuff));
     
             this.setBackground(table.select(table.backgrounds));
+            this.setPsionic(table.checkforpsionics(this.getCHA(), this.getINT(), this.getWIS()));
         },
-   
         generatestats: function() {
             var totalmod = -1000;
             var table = whatwentwrong.Table.getInstance();
