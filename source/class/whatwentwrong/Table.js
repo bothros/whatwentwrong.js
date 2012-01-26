@@ -63,10 +63,10 @@ qx.Class.define("whatwentwrong.Table", {
         highchanceprefs: [
             "Into dudes",
             "Into dudes, but once in a while when you get drunk...",
-            "Bi. You have got no preference either way.",
-            "Into ladies, but this one time at band camp...",
+            "Into dudes and ladies.",
+            "Into ladies, but once in a while when you get drunk...",
             "Into ladies.",
-            "Into something kinky, please fill in."
+            "Into something kinky, please fill in." //TODO: fix this one
         ],
         lowchanceprefs: [
             "No interest.",
@@ -84,8 +84,6 @@ qx.Class.define("whatwentwrong.Table", {
             "Cave Dweller",
             "Cave Dweller",
             "Cave Dweller",
-            "Cave Dweller",
-            "Savage Tribesman",
             "Savage Tribesman",
             "Savage Tribesman",
             "Savage Tribesman",
@@ -96,6 +94,8 @@ qx.Class.define("whatwentwrong.Table", {
             "Nyarlathotepite",
             "Badass Metal Viking",
             "Badass Metal Viking",
+            "Chevalier Hurlant",
+            //"Chevalier Hurlant",
             "Arcology Fugitive"
         ],
         stuffbytechlevel: {
@@ -121,11 +121,19 @@ qx.Class.define("whatwentwrong.Table", {
             "Badass Metal Viking": [
                 new whatwentwrong.Stuff("iron horned helmet", "."), //TODO: weapon?
                 new whatwentwrong.Stuff("iron battle-ax", "+"), //TODO: weapon
-                new whatwentwrong.Stuff("leather armor", "."), //TODO: armor
+                new whatwentwrong.Stuff("ring mail", "."), //TODO: armor
                 new whatwentwrong.Stuff("shaggy cloak", "."),
                 new whatwentwrong.Stuff("wool tunic", "."),
                 new whatwentwrong.Stuff("wool leggings", "."),
                 new whatwentwrong.Stuff("leather shoes", ".")
+            ],
+            "Chevalier Hurlant": [
+                new whatwentwrong.Stuff("brass lance", "*"), //TODO: weapon
+                new whatwentwrong.Stuff("chrome steel plate armor", "+"), //TODO: armor
+                new whatwentwrong.Stuff("skull-face helmet", "."), //TODO: helmet?
+                new whatwentwrong.Stuff("wooden targe, (detail arms)", "."), //TODO: shield
+                new whatwentwrong.Stuff("black gambeson", "."),
+                new whatwentwrong.Stuff("death machine", ".")
             ],
             "Arcology Fugitive": [
                 new whatwentwrong.Stuff("polyester jumpsuit", "."),
@@ -172,7 +180,15 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("the severed arm of a Voormi, one of the hairy men of the mountains", "+"),
             new whatwentwrong.Stuff("a space alien grenade. Roll on the table", "+"), //TODO: incorporate grenade table
             new whatwentwrong.Stuff("a child slave", "."),
-            new whatwentwrong.Stuff("a bone whistle", ".")
+            new whatwentwrong.Stuff("a bone whistle", "."),
+            new whatwentwrong.Stuff("2 doses of Black Lotus, 3 doses of Blue Lotus", "."),
+            new whatwentwrong.Stuff("2 doses of Jale Lotus", "."),
+            new whatwentwrong.Stuff("5 doses of White Lotus", "."),
+            new whatwentwrong.Stuff("a rowan wood shield, from another world", "."), //TODO: shield
+            new whatwentwrong.Stuff("the tooth of a smilodon", "+"), //TODO: weapon
+            new whatwentwrong.Stuff("ultratelluric steel helm, with velociraptor plume", "."), //TODO: helmet?
+            new whatwentwrong.Stuff("alien plastic sword that whistles music through the air as it swings", "+"), //TODO: weapon
+            new whatwentwrong.Stuff("a wooden Nyarlathotepite barque, 75' long", ".")
         ],
         backgrounds: [
             "You saved this one dudes life and now hes your loyal follower.",
