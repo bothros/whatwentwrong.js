@@ -58,13 +58,15 @@ members :
            */
 
 
-        var character = whatwentwrong.Table.getInstance().generatecharacter();
+        //var character = whatwentwrong.Table.getInstance().generatecharacter();
+        this.debug(whatwentwrong.Character.getInstance().toString());
 
         var doc = this.getRoot();
 
-        var outbox = new whatwentwrong.Outbox().set({character: character});
+        var outbox = new whatwentwrong.Outbox();
 
         doc.add(outbox);
+        outbox.update();
 
     }
 }

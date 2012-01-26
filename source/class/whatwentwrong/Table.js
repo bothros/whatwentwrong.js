@@ -199,60 +199,6 @@ qx.Class.define("whatwentwrong.Table", {
         ],
         
         //random generation functions
-        generatecharacter: function() {
-            var character = {};
-
-            character.stats = this.generatestats();
-
-            character.age = 11 + this.dieroll(4, 3);
-
-            if (this.chanceroll(this.racechance)) {
-                character.race = this.select(this.lowchanceraces);
-            } else {
-                character.race = this.select(this.highchanceraces);
-            }
-    
-            if (this.chanceroll(this.sexchance)) {
-                character.sex = this.select(this.lowchancesexes);
-            } else {
-                character.sex = this.select(this.highchancesexes);
-            }
-    
-            if (this.chanceroll(this.prefchance)) {
-                character.pref = this.select(this.lowchanceprefs);
-            } else {
-                character.pref = this.select(this.highchanceprefs);
-            }
-
-            character.techlevel = this.select(this.techlevels);
-    
-            character.stuff = this.stuffbytechlevel[character.techlevel];
-            character.stuff.push(this.select(this.deckostuff));
-    
-            character.background = this.select(this.backgrounds);
-    
-            return character;
-        },
-
-        generatestats: function() {
-            var totalmod = -1000;
-
-            var returnstats = {}
-
-            while (totalmod < 0) {
-                for (var i=0; i<this.stats.length; i++) {
-                    returnstats[this.stats[i]] = this.dieroll(6, 3);
-                    //this.debug(this.stats[i] + ": " + character.stats[this.stats[i]]);
-                }
-                totalmod = 0;
-                for (var i=0; i<this.stats.length; i++) {
-                    totalmod +=this. statmods[returnstats[this.stats[i]]];
-                }
-            }
-
-            return returnstats;
-        },
-
         chanceroll: function(threshold) {
             var roll = Math.random();
 
