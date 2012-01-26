@@ -81,6 +81,7 @@ qx.Class.define("whatwentwrong.Table", {
         prefchance: 0.05,
         techlevels: [
             "Total Throwback",
+            "Total Throwback",
             "Cave Dweller",
             "Cave Dweller",
             "Cave Dweller",
@@ -88,14 +89,20 @@ qx.Class.define("whatwentwrong.Table", {
             "Savage Tribesman",
             "Savage Tribesman",
             "Savage Tribesman",
-            "Nyarlathotepite",
-            "Nyarlathotepite",
-            "Nyarlathotepite",
-            "Nyarlathotepite",
+            "Cultist",
+            "Cultist",
+            "Cultist",
+            "Nyarlathotepite Citizen",
+            "Nyarlathotepite Citizen",
+            "Nyarlathotepite Citizen",
+            "Nyarlathotepite Citizen",
+            "Nyarlathotepite Soldier",
+            "Nyarlathotepite Soldier",
+            "Badass Metal Viking",
             "Badass Metal Viking",
             "Badass Metal Viking",
             "Chevalier Hurlant",
-            //"Chevalier Hurlant",
+            "Chevalier Hurlant",
             "Arcology Fugitive"
         ],
         stuffbytechlevel: {
@@ -109,13 +116,26 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("big wicker shield", "."), //TODO: shield
                 new whatwentwrong.Stuff("loincloth", ".")
             ],
-            "Nyarlathotepite": [
+            "Nyarlathotepite Soldier": [
                 new whatwentwrong.Stuff("bronze khopesh", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("bronze shield", "."), //TODO: shield
                 new whatwentwrong.Stuff("shortbow", "+"), //TODO: ranged weapon
                 new whatwentwrong.Stuff("20 arrows in a quiver", "+"),
                 new whatwentwrong.Stuff("linen skirt", "."),
                 new whatwentwrong.Stuff("head-dress", "."),
+                new whatwentwrong.Stuff("sandals", ".")
+            ],
+            "Nyarlathotepite Citizen": [
+                new whatwentwrong.Stuff("bronze dagger", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("clay bead jewelry everywhere", "."),
+                new whatwentwrong.Stuff("linen skirt", "."),
+                new whatwentwrong.Stuff("head-dress", "."),
+                new whatwentwrong.Stuff("sandals", ".")
+            ],
+            "Cultist": [
+                new whatwentwrong.Stuff("ceremonial staff", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze knife", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("hooded linen robe", "."),
                 new whatwentwrong.Stuff("sandals", ".")
             ],
             "Badass Metal Viking": [
@@ -188,7 +208,15 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("the tooth of a smilodon", "+"), //TODO: weapon
             new whatwentwrong.Stuff("ultratelluric steel helm, with velociraptor plume", "."), //TODO: helmet?
             new whatwentwrong.Stuff("alien plastic sword that whistles music through the air as it swings", "+"), //TODO: weapon
-            new whatwentwrong.Stuff("a wooden Nyarlathotepite barque, 75' long", ".")
+            new whatwentwrong.Stuff("a wooden Nyarlathotepite barque, 75' long", "."),
+            new whatwentwrong.Stuff("plate armor made from a broken robot", "+"), //TODO: armor
+            new whatwentwrong.Stuff("a black basalt icon of the goddess Abhoth in the form of a billy-goat", "+"),
+            new whatwentwrong.Stuff("a dolm meteorite", "+"),
+            new whatwentwrong.Stuff("a Kethelneshite razor shield", "."), //TODO: shield, weapon
+            new whatwentwrong.Stuff("a bronze helmet shaped like an ant's head", "."), //TODO: helmet?
+            new whatwentwrong.Stuff("a stick of chalk", "."),
+            new whatwentwrong.Stuff("a wicker cage", "+"),
+            new whatwentwrong.Stuff("a bronze saw", "+")
         ],
         backgrounds: [
             "You saved this one dudes life and now hes your loyal follower.",
@@ -203,7 +231,7 @@ qx.Class.define("whatwentwrong.Table", {
             "This crazy old man keeps showing up, proclaming you some sort of messiah.",
             "You are a mutant. Roll one Mutation out of the book.", //TODO: have generator do this
             "You have got this wicked scar from a bad run-in with a carnosaur.",
-            "You were an alien abductee. Your butthole is still sore.",
+            //"You were an alien abductee. Your butthole is still sore.",
             "You have got some wicked awesome tattoos.",
             "You do not know how to swim.",
             "You know where some sorcerer stashed a scroll describing a ritual.",
@@ -211,7 +239,9 @@ qx.Class.define("whatwentwrong.Table", {
             "You have got a knack for figuring out alien technology.",
             //new ones start here
             "You want to see the Lost City of Carcosa, before you die.",
-            "Your father was a Deep One."
+            "Your father was a Deep One.",
+            "Your father was a tribal Chieftan.",
+            "Your father was Master Grim, one of the seven sorcerers of Kethelnesh."
         ],
         
         //random generation functions
