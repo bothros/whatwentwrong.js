@@ -57,14 +57,23 @@ members :
            -------------------------------------------------------------------------
            */
 
+
+        var character = this.generatecharacter();
+
+        var doc = this.getRoot();
+
+        var outbox = new whatwentwrong.Outbox().set({character: character});
+
+        doc.add(outbox);
+
+    },
+
+    generatecharacter: function() {
         var character = {};
 
-        character.stats = {};
+        character.stats = this.generatestats();
 
-        for (var i=0; i<this.stats.length; i++) {
-            character.stats[this.stats[i]] = this.dieroll(6, 3);
-            this.debug(this.stats[i] + ": " + character.stats[this.stats[i]]);
-        }     
+        character.age = 10 + this.dieroll(6, 2);
 
         if (this.chanceroll(this.racechance)) {
             character.race = this.select(this.lowchanceraces);
@@ -72,15 +81,11 @@ members :
             character.race = this.select(this.highchanceraces);
         }
 
-        this.debug(character.race);
-
         if (this.chanceroll(this.sexchance)) {
             character.sex = this.select(this.lowchancesexes);
         } else {
             character.sex = this.select(this.highchancesexes);
         }
-
-        this.debug(character.sex);
 
         if (this.chanceroll(this.prefchance)) {
             character.pref = this.select(this.lowchanceprefs);
@@ -88,23 +93,33 @@ members :
             character.pref = this.select(this.highchanceprefs);
         }
 
-        this.debug(character.pref);
-
         character.techlevel = this.select(this.techlevels);
-
-        this.debug(character.techlevel);
 
         character.stuff = this.stuffbytechlevel[character.techlevel];
         character.stuff.push(this.select(this.deckostuff));
 
-        this.debug(character.stuff);
-
         character.background = this.select(this.backgrounds);
 
-        this.debug(character.background);
+        return character;
+    },
 
-        this.debug(character);
+    generatestats: function() {
+        var totalmod = -1000;
 
+        var returnstats = {}
+
+        while (totalmod < 0) {
+            for (var i=0; i<this.stats.length; i++) {
+                returnstats[this.stats[i]] = this.dieroll(6, 3);
+                //this.debug(this.stats[i] + ": " + character.stats[this.stats[i]]);
+            }
+            totalmod = 0;
+            for (var i=0; i<this.stats.lenth; i++) {
+                totalmod += statmods[returnstats[this.stats[i]]];
+            }
+        }
+
+        return returnstats;
     },
 
     chanceroll: function(threshold) {
@@ -142,6 +157,28 @@ members :
         "Strength",
         "Wisdom"
     ],      
+
+    statmods: [
+        -1000, //0
+        -1000, //1
+        -1000, //2
+        -3, //3
+        -2, //4
+        -2, //5
+        -1, //6
+        -1, //7
+        -1, //8
+        0,  //9
+        0,  //10
+        0,  //11
+        0,  //12
+        1,  //13
+        1,  //14
+        1,  //15
+        2,  //16
+        2,  //17
+        3   //18
+    ],
 
 highchanceraces: [
     "Black",
