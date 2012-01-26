@@ -41,7 +41,7 @@ qx.Class.define("whatwentwrong.Outbox", {
             outstring += "Tech Level: " + character.techlevel + "\n";
 
             for (var stat in character.stats) {
-                outstring += stat + ": " + character.stats[stat] + "\n"; //TODO: print mods 
+                outstring += stat + ": " + character.stats[stat] + "   " + whatwentwrong.Table.getInstance().statmods[character.stats[stat]] + "\n"; //TODO: print mods 
             }
 
             outstring += "Sex: " + character.sex + "\n";
