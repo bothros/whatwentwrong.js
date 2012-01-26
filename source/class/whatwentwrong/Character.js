@@ -211,7 +211,7 @@ qx.Class.define("whatwentwrong.Character", {
         stringStuff: function() {
             var outstring = "Stuff:\n";
             for (var i=0; i<this.getStuff().length; i++) {
-                outstring += "\t" + this.getStuff()[i] + "\n";
+                outstring += this.getStuff()[i].toString();
             }
             return outstring;
         },

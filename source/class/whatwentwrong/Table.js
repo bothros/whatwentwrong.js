@@ -101,78 +101,78 @@ qx.Class.define("whatwentwrong.Table", {
         stuffbytechlevel: {
             "Total Throwback": [],
             "Cave Dweller": [
-                "club",
-                "stinky panther pelt"
+                new whatwentwrong.Stuff("club", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("stinky panther pelt", ".")
             ],
             "Savage Tribesman": [
-                "stone-tipped spear",
-                "big wicker shield",
-                "loincloth"
+                new whatwentwrong.Stuff("stone-tipped spear", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("big wicker shield", "."), //TODO: shield
+                new whatwentwrong.Stuff("loincloth", ".")
             ],
             "Nyarlathotepite": [
-                "bronze khopesh",
-                "bronze shield",
-                "shortbow",
-                "20 arrows",
-                "linen skirt",
-                "head-dress",
-                "sandals"
+                new whatwentwrong.Stuff("bronze khopesh", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze shield", "."), //TODO: shield
+                new whatwentwrong.Stuff("shortbow", "+"), //TODO: ranged weapon
+                new whatwentwrong.Stuff("20 arrows in a quiver", "+"),
+                new whatwentwrong.Stuff("linen skirt", "."),
+                new whatwentwrong.Stuff("head-dress", "."),
+                new whatwentwrong.Stuff("sandals", ".")
             ],
             "Badass Metal Viking": [
-                "iron horned helmet",
-                "iron battle-ax",
-                "leather armor",
-                "shaggy cloak",
-                "wool tunic",
-                "wool leggings",
-                "leather shoes"
+                new whatwentwrong.Stuff("iron horned helmet", "."), //TODO: weapon?
+                new whatwentwrong.Stuff("iron battle-ax", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("leather armor", "."), //TODO: armor
+                new whatwentwrong.Stuff("shaggy cloak", "."),
+                new whatwentwrong.Stuff("wool tunic", "."),
+                new whatwentwrong.Stuff("wool leggings", "."),
+                new whatwentwrong.Stuff("leather shoes", ".")
             ],
             "Arcology Fugitive": [
-                "polyester jumpsuit",
-                "random ray pistol", //TODO: incorporate raygun tables
-                "vanadium collar",
-                "sneakers"
+                new whatwentwrong.Stuff("polyester jumpsuit", "."),
+                new whatwentwrong.Stuff("random ray pistol", "+"), //TODO: incorporate raygun tables
+                new whatwentwrong.Stuff("vanadium collar", "+"),
+                new whatwentwrong.Stuff("sneakers", ".")
             ]
         },
         deckostuff: [
-            "5 poorly made torches (only burn 4 or 5 turns each)",
-            "45 feet of rope made of human hair",
-            "skin full of brackish water",
-            "cool necklace of animal fangs and claws",
-            "stick of red ochre",
-            "flea-ridden cloak",
-            "a gourd full of some putrid alcoholic beverage",
-            "a copper bracer with some useless \"anti-demon\" rune on it",
-            "3 doses of hallucinogenic mushrooms",
-            "a dozen small lumpy purple pear-like fruits wrapped in a bit of weaseloid fur (maybe enough for two or three small meals)",
-            "a chunk of flint and a small bit of alien metal that works almost as well as steel would",
-            "the skull of your brother (long story)",
-            "a rotten old pterodactyl egg (makes a great stink bomb)",
-            "a largish lump of low grade gold (worth d100gp if buyer can be found)",
-            "alien computer access medallion (looks like you wear it to the disco)",
-            "a sealed clay pot containing a few hundred deathmaggots (do not fall while carrying!)",
-            "pet lizardwolf (2 HD, 14 AC, loyal unto death)",
-            "a small sphere (2\" diameter) made of a hard translucent substance, origin unknown",
-            "wooden flute",
-            "net (designed for fishing but maybe could hold a monster)",
+            new whatwentwrong.Stuff("5 poorly made torches (only burn 4 or 5 turns each)", 5),
+            new whatwentwrong.Stuff("45 feet of rope made of human hair", "+"),
+            new whatwentwrong.Stuff("skin full of brackish water", "+"),
+            new whatwentwrong.Stuff("cool necklace of animal fangs and claws", "."),
+            new whatwentwrong.Stuff("stick of red ochre", "."), //TODO: roll for color?
+            new whatwentwrong.Stuff("flea-ridden cloak", "."),
+            new whatwentwrong.Stuff("a gourd full of some putrid alcoholic beverage", "+"),
+            new whatwentwrong.Stuff("a copper bracer with some useless \"anti-demon\" rune on it", "."),
+            new whatwentwrong.Stuff("3 doses of hallucinogenic mushrooms", "+"),
+            new whatwentwrong.Stuff("a dozen small lumpy purple pear-like fruits wrapped in a bit of weaseloid fur (maybe enough for two or three small meals)", "+"),
+            new whatwentwrong.Stuff("a chunk of flint and a small bit of alien metal that works almost as well as steel would", "+"),
+            new whatwentwrong.Stuff("the skull of your brother (long story)", "+"),
+            new whatwentwrong.Stuff("a rotten old pterodactyl egg (makes a great stink bomb)", "+"),
+            new whatwentwrong.Stuff("a largish lump of low grade gold (worth d100gp if buyer can be found)", "+"),
+            new whatwentwrong.Stuff("alien computer access medallion (looks like you wear it to the disco)", "."),
+            new whatwentwrong.Stuff("a sealed clay pot containing a few hundred deathmaggots (do not fall while carrying!)", "+"),
+            new whatwentwrong.Stuff("pet lizardwolf (2 HD, 14 AC, loyal unto death)", "."),
+            new whatwentwrong.Stuff("a small sphere (2\" diameter) made of a hard translucent substance, origin unknown", "."),
+            new whatwentwrong.Stuff("wooden flute", "+"),
+            new whatwentwrong.Stuff("net (designed for fishing but maybe could hold a monster)", "+"), //TODO: weapon?
             //"7 foot length of stout iron chain",
-            "Zardoz mask",
-            "riding lizard",
-            "lantern holding some sort of slug-like bio-luminescent lifeform",
-            "small bag filled with fine white sand",
-            "the right hand of an unknown stone statue",
-            "a bunch of dried witchroot",
-            "dowsing rod",
-            "9 foot pole of fibrous fungal matter",
-            "partially functional head of an ancient, insane robot",
+            new whatwentwrong.Stuff("Zardoz mask", "."),
+            new whatwentwrong.Stuff("riding lizard", "."),
+            new whatwentwrong.Stuff("lantern holding some sort of slug-like bio-luminescent lifeform", "+"),
+            new whatwentwrong.Stuff("small bag filled with fine white sand", "+"),
+            new whatwentwrong.Stuff("the right hand of an unknown stone statue", "+"),
+            new whatwentwrong.Stuff("a bunch of dried witchroot", "+"),
+            new whatwentwrong.Stuff("dowsing rod", "+"),
+            new whatwentwrong.Stuff("9 foot pole of fibrous fungal matter", "*"),
+            new whatwentwrong.Stuff("partially functional head of an ancient, insane robot", "+"),
             //New stuff starts here
-            "a strangely elliptical gold diadem, it doesn't quite fit a human head",
-            "an air-bladder, removed from the gizzard of a dinosaur",
-            "a bear-skin",
-            "the severed arm of a Voormi, one of the hairy men of the mountains",
-            "a space alien grenade. Roll on the table", //TODO: incorporate grenade table
-            "a child slave",
-            "a bone whistle"
+            new whatwentwrong.Stuff("a strangely elliptical gold diadem, it doesn't quite fit a human head", "+"),
+            new whatwentwrong.Stuff("an air-bladder, removed from the gizzard of a dinosaur", "."),
+            new whatwentwrong.Stuff("a bear-skin", "."),
+            new whatwentwrong.Stuff("the severed arm of a Voormi, one of the hairy men of the mountains", "+"),
+            new whatwentwrong.Stuff("a space alien grenade. Roll on the table", "+"), //TODO: incorporate grenade table
+            new whatwentwrong.Stuff("a child slave", "."),
+            new whatwentwrong.Stuff("a bone whistle", ".")
         ],
         backgrounds: [
             "You saved this one dudes life and now hes your loyal follower.",
