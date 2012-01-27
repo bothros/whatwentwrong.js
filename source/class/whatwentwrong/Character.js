@@ -83,9 +83,9 @@ qx.Class.define("whatwentwrong.Character", {
             event: "changeSTR",
             init: 0
         },
-        WIS: {
+        LCK: {
             check: "Number",
-            event: "changeWIS",
+            event: "changeLCK",
             init: 0
         },
         CHAmod: {
@@ -113,9 +113,9 @@ qx.Class.define("whatwentwrong.Character", {
             event: "changeSTRmod",
             init: -1000
         },
-        WISmod: {
+        LCKmod: {
             check: "Number",
-            event: "changeWISmod",
+            event: "changeLCKmod",
             init: -1000
         },
         psionic: {
@@ -138,7 +138,7 @@ qx.Class.define("whatwentwrong.Character", {
         this.bind("DEX", this, "DEXmod", options);
         this.bind("INT", this, "INTmod", options);
         this.bind("STR", this, "STRmod", options);
-        this.bind("WIS", this, "WISmod", options);
+        this.bind("LCK", this, "LCKmod", options);
         this.generate();
     },
 
@@ -166,9 +166,9 @@ qx.Class.define("whatwentwrong.Character", {
         },
         stringStats: function() {
             var outstring = "";
-            outstring += "CHA\tCON\tDEX\tINT\tSTR\tWIS\n";
-            outstring += this.getCHA() + "\t" + this.getCON() + "\t" + this.getDEX() + "\t" + this.getINT() + "\t" + this.getSTR() + "\t" + this.getWIS() + "\n";
-            outstring += this.getCHAmod() + "\t" + this.getCONmod() + "\t" + this.getDEXmod() + "\t" + this.getINTmod() + "\t" + this.getSTRmod() + "\t" + this.getWISmod() + "\n";
+            outstring += "CHA\tCON\tDEX\tINT\tSTR\tLCK\n";
+            outstring += this.getCHA() + "\t" + this.getCON() + "\t" + this.getDEX() + "\t" + this.getINT() + "\t" + this.getSTR() + "\t" + this.getLCK() + "\n";
+            outstring += this.getCHAmod() + "\t" + this.getCONmod() + "\t" + this.getDEXmod() + "\t" + this.getINTmod() + "\t" + this.getSTRmod() + "\t" + this.getLCKmod() + "\n";
             return outstring;
         },
         stringName: function() {
@@ -251,7 +251,7 @@ qx.Class.define("whatwentwrong.Character", {
             this.getStuff().push(table.select(table.deckostuff));
     
             this.setBackground(table.select(table.backgrounds));
-            this.setPsionic(table.checkforpsionics(this.getCHA(), this.getINT(), this.getWIS()));
+            this.setPsionic(table.checkforpsionics(this.getCHA(), this.getINT(), this.getLCK()));
         },
         generatestats: function() {
             var totalmod = -1000;
@@ -263,8 +263,8 @@ qx.Class.define("whatwentwrong.Character", {
                 this.setDEX(table.dieroll(6, 3));
                 this.setINT(table.dieroll(6, 3));
                 this.setSTR(table.dieroll(6, 3));
-                this.setWIS(table.dieroll(6, 3));
-                totalmod = this.getCHAmod() + this.getCONmod() + this.getDEXmod() + this.getINTmod() + this.getSTRmod() + this.getWISmod();
+                this.setLCK(table.dieroll(6, 3));
+                totalmod = this.getCHAmod() + this.getCONmod() + this.getDEXmod() + this.getINTmod() + this.getSTRmod() + this.getLCKmod();
             }
         }
     }
