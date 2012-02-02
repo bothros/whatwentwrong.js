@@ -9,7 +9,7 @@ qx.Class.define("whatwentwrong.Table", {
             "Dexterity",
             "Intelligence",
             "Strength",
-            "Luck"
+            "Wisdom"
         ], 
         statmods: [
             -1000, //0
@@ -159,8 +159,7 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("bronze grilled helmet", "."),
                 new whatwentwrong.Stuff("leather battle-harness", "."),
                 new whatwentwrong.Stuff("bronze scale sleeve", "+"),
-                new whatwentwrong.Stuff("wooden shield", "."),
-                new whatwentwrong.Stuff("wooden sandals", ".")
+                new whatwentwrong.Stuff("bronze shield", ".")
             ],
             "Arcology Fugitive": [
                 new whatwentwrong.Stuff("polyester jumpsuit", "."),
@@ -226,7 +225,8 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("a bronze saw", "+"),
             new whatwentwrong.Stuff("a mummified male member", "."),
             new whatwentwrong.Stuff("a huge club made from a thagomizer", "*"), //TODO: weapon
-            new whatwentwrong.Stuff("leather and iron cestus", "*") //TODO: weapon
+            new whatwentwrong.Stuff("leather and iron cestus", "*"), //TODO: weapon
+            new whatwentwrong.Stuff("steel helmet, with no opening for the eyes", ".")
         ],
         backgrounds: [
             "You saved this one dudes life and now hes your loyal follower.",
