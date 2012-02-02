@@ -9,7 +9,7 @@ qx.Class.define("whatwentwrong.Table", {
             "Dexterity",
             "Intelligence",
             "Strength",
-            "Wisdom"
+            "Luck"
         ], 
         statmods: [
             -1000, //0
@@ -72,8 +72,7 @@ qx.Class.define("whatwentwrong.Table", {
             "No interest.",
             "Into robots.",
             "Into tentacled horrors.",
-            "Into greys.",
-            "Into neogi.",
+            "Into grey aliens.",
             "Into dinosaurs.",
             "Into really sexy plants.",
             "Into everything."
@@ -100,7 +99,7 @@ qx.Class.define("whatwentwrong.Table", {
             "Nyarlathotepite Soldier",
             "Badass Metal Viking",
             "Badass Metal Viking",
-            "Badass Metal Viking",
+            "Kethelneshi Gladiator",
             "Chevalier Hurlant",
             "Chevalier Hurlant",
             "Arcology Fugitive"
@@ -154,6 +153,14 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("wooden targe, (detail arms)", "."), //TODO: shield
                 new whatwentwrong.Stuff("black gambeson", "."),
                 new whatwentwrong.Stuff("death machine", ".")
+            ],
+            "Kethelneshi Gladiator": [
+                new whatwentwrong.Stuff("bronze gladius", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze grilled helmet", "."),
+                new whatwentwrong.Stuff("leather battle-harness", "."),
+                new whatwentwrong.Stuff("bronze scale sleeve", "+"),
+                new whatwentwrong.Stuff("wooden shield", "."),
+                new whatwentwrong.Stuff("wooden sandals", ".")
             ],
             "Arcology Fugitive": [
                 new whatwentwrong.Stuff("polyester jumpsuit", "."),
@@ -216,7 +223,10 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("a bronze helmet shaped like an ant's head", "."), //TODO: helmet?
             new whatwentwrong.Stuff("a stick of chalk", "."),
             new whatwentwrong.Stuff("a wicker cage", "+"),
-            new whatwentwrong.Stuff("a bronze saw", "+")
+            new whatwentwrong.Stuff("a bronze saw", "+"),
+            new whatwentwrong.Stuff("a mummified male member", "."),
+            new whatwentwrong.Stuff("a huge club made from a thagomizer", "*"), //TODO: weapon
+            new whatwentwrong.Stuff("leather and iron cestus", "*") //TODO: weapon
         ],
         backgrounds: [
             "You saved this one dudes life and now hes your loyal follower.",

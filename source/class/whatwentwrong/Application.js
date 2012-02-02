@@ -63,10 +63,18 @@ members :
 
         var doc = this.getRoot();
 
+        var throwstuffhere = new qx.ui.container.Composite().set({layout: new qx.ui.layout.VBox()});
+
+        //var namefield = new whatwentwrong.NameField();
+
         var outbox = new whatwentwrong.Outbox();
 
-        doc.add(outbox);
+        //throwstuffhere.add(namefield);
+
+        throwstuffhere.add(outbox);
         outbox.update();
+
+        doc.add(throwstuffhere);
 
     }
 }
