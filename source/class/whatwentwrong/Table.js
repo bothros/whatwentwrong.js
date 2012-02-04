@@ -111,6 +111,8 @@ qx.Class.define("whatwentwrong.Table", {
             "Cave Dweller": [
                 new whatwentwrong.Stuff("club", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("stinky panther pelt", ".")
+            ],
+            "Savage Tribesman": [
                 new whatwentwrong.Stuff("stone-tipped spear", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("big wicker shield", "."), //TODO: shield
                 new whatwentwrong.Stuff("loincloth", ".")

@@ -246,6 +246,7 @@ qx.Class.define("whatwentwrong.Character", {
             }
 
             this.setTechLevel(table.select(table.techlevels));
+            this.debug(this.getTechLevel());
     
             this.setStuff(qx.lang.Array.clone(table.stuffbytechlevel[this.getTechLevel()]));
             this.getStuff().push(table.select(table.deckostuff));
