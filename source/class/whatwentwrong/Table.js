@@ -91,6 +91,8 @@ qx.Class.define("whatwentwrong.Table", {
             "Cultist",
             "Cultist",
             "Cultist",
+            "Damned Isles Sailor",
+            "Damned Isles Sailor",
             "Nyarlathotepite Citizen",
             "Nyarlathotepite Citizen",
             "Nyarlathotepite Citizen",
@@ -109,8 +111,6 @@ qx.Class.define("whatwentwrong.Table", {
             "Cave Dweller": [
                 new whatwentwrong.Stuff("club", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("stinky panther pelt", ".")
-            ],
-            "Savage Tribesman": [
                 new whatwentwrong.Stuff("stone-tipped spear", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("big wicker shield", "."), //TODO: shield
                 new whatwentwrong.Stuff("loincloth", ".")
@@ -136,6 +136,12 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("bronze knife", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("hooded linen robe", "."),
                 new whatwentwrong.Stuff("sandals", ".")
+            ],
+            "Damned Isles Sailor": [
+                new whatwentwrong.Stuff("bronze cutlass", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("canvas vest", "."),
+                new whatwentwrong.Stuff("canvas trousers", "."),
+                new whatwentwrong.Stuff("sick boots", ".")
             ],
             "Badass Metal Viking": [
                 new whatwentwrong.Stuff("iron horned helmet", "."), //TODO: weapon?
