@@ -24,6 +24,10 @@ qx.Class.define("whatwentwrong.Stuff", {
         damage: {
             init: null,
             nullable: true
+        },
+        reach: {
+            init: null,
+            nullable: true
         }
     },
 
@@ -66,6 +70,9 @@ qx.Class.define("whatwentwrong.Stuff", {
             }
             if (this.getDamage()) {
                 stats.push(this.getDamage() + " damage")
+            }
+            if (this.getReach()) {
+                stats.push("reach");
             }
             if (stats.length > 0) {
                 outstring += " [";

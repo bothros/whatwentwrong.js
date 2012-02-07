@@ -152,6 +152,7 @@ qx.Class.define("whatwentwrong.Character", {
             outstring += this.stringPref();
             outstring += this.stringTechLevel();
             outstring += this.stringStats();
+            outstring += this.stringDerivedStats();
             outstring += this.stringStuff();
             outstring += this.stringBackground();
             outstring += this.stringPsionic();
@@ -169,6 +170,12 @@ qx.Class.define("whatwentwrong.Character", {
             outstring += "CHA\tCON\tDEX\tINT\tSTR\tWIS\n";
             outstring += this.getCHA() + "\t" + this.getCON() + "\t" + this.getDEX() + "\t" + this.getINT() + "\t" + this.getSTR() + "\t" + this.getWIS() + "\n";
             outstring += this.getCHAmod() + "\t" + this.getCONmod() + "\t" + this.getDEXmod() + "\t" + this.getINTmod() + "\t" + this.getSTRmod() + "\t" + this.getWISmod() + "\n";
+            return outstring;
+        },
+        stringDerivedStats: function() {
+            var outstring = "";
+            outstring += "AC\n";
+            outstring += this.getAC() + "\n";
             return outstring;
         },
         stringName: function() {
@@ -267,6 +274,30 @@ qx.Class.define("whatwentwrong.Character", {
                 this.setWIS(table.dieroll(6, 3));
                 totalmod = this.getCHAmod() + this.getCONmod() + this.getDEXmod() + this.getINTmod() + this.getSTRmod() + this.getWIS();
             }
+        },
+        getAC: function() {
+            var AC = 12 + this.getDEXmod();
+            var table = whatwentwrong.Table.getInstance();
+            var shield = false;
+
+            this.debug(this.getStuff());
+            this.debug(this.getStuff()[0]);
+
+            for (var i=0; i<this.getStuff().length; i++) {
+                var thing = this.getStuff()[i];
+                if (thing.getArmor() && table.AC[thing.getArmor()] > AC) {
+                    AC = table.AC[thing.getArmor()];
+                }
+                if (thing.getShield()) {
+                    shield = true;
+                }
+            }
+
+            if (shield) {
+                AC += 1;
+            }
+            
+            return AC;
         }
     }
 });

@@ -118,7 +118,7 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("stinky panther pelt", ".")
             ],
             "Savage Tribesman": [
-                new whatwentwrong.Stuff("stone-tipped spear", "+", {"damage": "1d6"}), //TODO: polearm
+                new whatwentwrong.Stuff("stone-tipped spear", "+", {"damage": "1d6", "reach": true}),
                 new whatwentwrong.Stuff("big wicker shield", ".", {"shield": true}), 
                 new whatwentwrong.Stuff("loincloth", ".")
             ],
@@ -160,7 +160,7 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("leather shoes", ".")
             ],
             "Chevalier Hurlant": [
-                new whatwentwrong.Stuff("brass lance", "*", {"damage": "1d10"}), //TODO: polearm
+                new whatwentwrong.Stuff("brass lance", "*", {"damage": "1d10", "reach": true}),
                 new whatwentwrong.Stuff("chrome steel plate armor", "+", {"armor": "plate"}), 
                 new whatwentwrong.Stuff("skull-face helmet", ".", {"breakable": true}),
                 new whatwentwrong.Stuff("wooden targe, (detail arms)", ".", {"shield": true}),
