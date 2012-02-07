@@ -152,7 +152,7 @@ qx.Class.define("whatwentwrong.Character", {
             outstring += this.stringPref();
             outstring += this.stringTechLevel();
             outstring += this.stringStats();
-            outstring += this.stringDerivedStats();
+            //outstring += this.stringDerivedStats();
             outstring += this.stringStuff();
             outstring += this.stringBackground();
             outstring += this.stringPsionic();
