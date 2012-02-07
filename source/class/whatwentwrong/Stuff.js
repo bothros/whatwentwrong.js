@@ -16,6 +16,10 @@ qx.Class.define("whatwentwrong.Stuff", {
         shield: {
             init: null,
             nullable: true
+        },
+        breakable: {
+            init: null,
+            nullable: true
         }
     },
 
@@ -53,10 +57,13 @@ qx.Class.define("whatwentwrong.Stuff", {
                 stats.push("+1 AC");
                 stats.push("breakable");
             }
+            if (this.getBreakable() && !this.getShield()) {
+                stats.push("breakable");
+            }
             if (stats.length > 0) {
-                outstring += " (";
+                outstring += " [";
                 outstring += stats.join(", ");
-                outstring += ")"; 
+                outstring += "]"; 
             }
             outstring += "\n";
             return outstring;
