@@ -20,7 +20,7 @@ qx.Class.define("whatwentwrong.Stuff", {
         breakable: {
             init: null,
             nullable: true
-        }
+        },
         damage: {
             init: null,
             nullable: true

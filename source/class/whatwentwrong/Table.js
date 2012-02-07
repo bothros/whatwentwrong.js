@@ -224,21 +224,21 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("2 doses of Jale Lotus", "."),
             new whatwentwrong.Stuff("5 doses of White Lotus", "."),
             new whatwentwrong.Stuff("a rowan wood shield, from another world", ".", {"shield": true}),
-            new whatwentwrong.Stuff("the tooth of a smilodon", "+"), //TODO: weapon
+            new whatwentwrong.Stuff("the tooth of a smilodon", "+", {"damage": "1d4"}),
             new whatwentwrong.Stuff("ultratelluric steel helm, with velociraptor plume", ".", {"breakable": true}),
-            new whatwentwrong.Stuff("alien plastic sword that whistles music through the air as it swings", "+"), //TODO: weapon
+            new whatwentwrong.Stuff("alien plastic sword that whistles music through the air as it swings", "+", {"damage": "1d8"}),
             new whatwentwrong.Stuff("a wooden Nyarlathotepite barque, 75' long", "."),
             new whatwentwrong.Stuff("plate armor made from a broken robot", "+", {"armor": "plate"}), 
             new whatwentwrong.Stuff("a black basalt icon of the goddess Abhoth in the form of a billy-goat", "+"),
             new whatwentwrong.Stuff("a dolm meteorite", "+"),
-            new whatwentwrong.Stuff("a Kethelneshite razor shield", ".", {"shield": true}), //TODO: weapon
+            new whatwentwrong.Stuff("a Kethelneshite razor shield", ".", {"shield": true, "damage": "1d6"}),
             new whatwentwrong.Stuff("a bronze helmet shaped like an ant's head", ".", {"breakable": true}),
             new whatwentwrong.Stuff("a stick of chalk", "."),
             new whatwentwrong.Stuff("a wicker cage", "+"),
             new whatwentwrong.Stuff("a bronze saw", "+"),
             new whatwentwrong.Stuff("a mummified male member", "."),
-            new whatwentwrong.Stuff("a huge club made from a thagomizer", "*"), //TODO: weapon
-            new whatwentwrong.Stuff("leather and iron cestus", "*"), //TODO: weapon
+            new whatwentwrong.Stuff("a huge club made from a thagomizer", "*", {"damage": "1d8"}),
+            new whatwentwrong.Stuff("leather and iron cestus", ".", {"damage": "1d4"}),
             new whatwentwrong.Stuff("steel helmet, with no opening for the eyes", ".", {"breakable": true})
         ],
         backgrounds: [
