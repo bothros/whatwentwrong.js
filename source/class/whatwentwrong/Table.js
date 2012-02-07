@@ -118,14 +118,14 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("stinky panther pelt", ".")
             ],
             "Savage Tribesman": [
-                new whatwentwrong.Stuff("stone-tipped spear", "+", {"damage": "1d6", "reach": true}),
+                new whatwentwrong.Stuff("stone-tipped spear", "+", {"damage": "1d6", "reach": true, "range": "10'/20'/60'"}),
                 new whatwentwrong.Stuff("big wicker shield", ".", {"shield": true}), 
                 new whatwentwrong.Stuff("loincloth", ".")
             ],
             "Nyarlathotepite Soldier": [
                 new whatwentwrong.Stuff("bronze khopesh", "+", {"damage": "1d6"}), //Maybe 1d8 damage?
                 new whatwentwrong.Stuff("bronze shield", ".", {"shield": true}),
-                new whatwentwrong.Stuff("shortbow", "+", {"damage": "1d6"}), //TODO: ranged weapon
+                new whatwentwrong.Stuff("shortbow", "+", {"damage": "1d6", "range": "50'/300'/450'"}),
                 new whatwentwrong.Stuff("20 arrows in a quiver", "+"),
                 new whatwentwrong.Stuff("linen skirt", "."),
                 new whatwentwrong.Stuff("head-dress", "."),

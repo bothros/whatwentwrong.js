@@ -28,6 +28,10 @@ qx.Class.define("whatwentwrong.Stuff", {
         reach: {
             init: null,
             nullable: true
+        },
+        range: {
+            init: null,
+            nullable: true
         }
     },
 
@@ -73,6 +77,9 @@ qx.Class.define("whatwentwrong.Stuff", {
             }
             if (this.getReach()) {
                 stats.push("reach");
+            }
+            if (this.getRange()) {
+                stats.push("range " + this.getRange());
             }
             if (stats.length > 0) {
                 outstring += " [";
