@@ -32,6 +32,11 @@ qx.Class.define("whatwentwrong.Table", {
             2,  //17
             3   //18
         ],
+        AC: {
+            "leather": 14,
+            "chain": 16,
+            "plate": 18
+        },
         highchanceraces: [
             "Black",
             "Blue",
@@ -114,12 +119,12 @@ qx.Class.define("whatwentwrong.Table", {
             ],
             "Savage Tribesman": [
                 new whatwentwrong.Stuff("stone-tipped spear", "+"), //TODO: weapon
-                new whatwentwrong.Stuff("big wicker shield", "."), //TODO: shield
+                new whatwentwrong.Stuff("big wicker shield", ".", {"shield": true}), 
                 new whatwentwrong.Stuff("loincloth", ".")
             ],
             "Nyarlathotepite Soldier": [
                 new whatwentwrong.Stuff("bronze khopesh", "+"), //TODO: weapon
-                new whatwentwrong.Stuff("bronze shield", "."), //TODO: shield
+                new whatwentwrong.Stuff("bronze shield", ".", {"shield": true}),
                 new whatwentwrong.Stuff("shortbow", "+"), //TODO: ranged weapon
                 new whatwentwrong.Stuff("20 arrows in a quiver", "+"),
                 new whatwentwrong.Stuff("linen skirt", "."),
@@ -148,7 +153,7 @@ qx.Class.define("whatwentwrong.Table", {
             "Badass Metal Viking": [
                 new whatwentwrong.Stuff("iron horned helmet", "."), //TODO: weapon?
                 new whatwentwrong.Stuff("iron battle-ax", "+"), //TODO: weapon
-                new whatwentwrong.Stuff("ring mail", "."), //TODO: armor
+                new whatwentwrong.Stuff("ring mail", ".", {"armor": "chain"}), 
                 new whatwentwrong.Stuff("shaggy cloak", "."),
                 new whatwentwrong.Stuff("wool tunic", "."),
                 new whatwentwrong.Stuff("wool leggings", "."),
@@ -156,18 +161,18 @@ qx.Class.define("whatwentwrong.Table", {
             ],
             "Chevalier Hurlant": [
                 new whatwentwrong.Stuff("brass lance", "*"), //TODO: weapon
-                new whatwentwrong.Stuff("chrome steel plate armor", "+"), //TODO: armor
+                new whatwentwrong.Stuff("chrome steel plate armor", "+", {"armor": "plate"}), 
                 new whatwentwrong.Stuff("skull-face helmet", "."), //TODO: helmet?
-                new whatwentwrong.Stuff("wooden targe, (detail arms)", "."), //TODO: shield
+                new whatwentwrong.Stuff("wooden targe, (detail arms)", ".", {"shield": true}),
                 new whatwentwrong.Stuff("black gambeson", "."),
                 new whatwentwrong.Stuff("death machine", ".")
             ],
             "Kethelneshi Gladiator": [
                 new whatwentwrong.Stuff("bronze gladius", "+"), //TODO: weapon
                 new whatwentwrong.Stuff("bronze grilled helmet", "."),
-                new whatwentwrong.Stuff("leather battle-harness", "."),
+                new whatwentwrong.Stuff("leather battle-harness", "."), //Probably not armor?
                 new whatwentwrong.Stuff("bronze scale sleeve", "+"),
-                new whatwentwrong.Stuff("bronze shield", ".")
+                new whatwentwrong.Stuff("bronze shield", ".", {"shield": true})
             ],
             "Arcology Fugitive": [
                 new whatwentwrong.Stuff("polyester jumpsuit", "."),
@@ -218,15 +223,15 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("2 doses of Black Lotus, 3 doses of Blue Lotus", "."),
             new whatwentwrong.Stuff("2 doses of Jale Lotus", "."),
             new whatwentwrong.Stuff("5 doses of White Lotus", "."),
-            new whatwentwrong.Stuff("a rowan wood shield, from another world", "."), //TODO: shield
+            new whatwentwrong.Stuff("a rowan wood shield, from another world", ".", {"shield": true}),
             new whatwentwrong.Stuff("the tooth of a smilodon", "+"), //TODO: weapon
             new whatwentwrong.Stuff("ultratelluric steel helm, with velociraptor plume", "."), //TODO: helmet?
             new whatwentwrong.Stuff("alien plastic sword that whistles music through the air as it swings", "+"), //TODO: weapon
             new whatwentwrong.Stuff("a wooden Nyarlathotepite barque, 75' long", "."),
-            new whatwentwrong.Stuff("plate armor made from a broken robot", "+"), //TODO: armor
+            new whatwentwrong.Stuff("plate armor made from a broken robot", "+", {"armor": "plate"}), 
             new whatwentwrong.Stuff("a black basalt icon of the goddess Abhoth in the form of a billy-goat", "+"),
             new whatwentwrong.Stuff("a dolm meteorite", "+"),
-            new whatwentwrong.Stuff("a Kethelneshite razor shield", "."), //TODO: shield, weapon
+            new whatwentwrong.Stuff("a Kethelneshite razor shield", ".", {"shield": true}), //TODO: weapon
             new whatwentwrong.Stuff("a bronze helmet shaped like an ant's head", "."), //TODO: helmet?
             new whatwentwrong.Stuff("a stick of chalk", "."),
             new whatwentwrong.Stuff("a wicker cage", "+"),
