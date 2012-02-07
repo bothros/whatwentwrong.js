@@ -114,45 +114,45 @@ qx.Class.define("whatwentwrong.Table", {
         stuffbytechlevel: {
             "Total Throwback": [],
             "Cave Dweller": [
-                new whatwentwrong.Stuff("club", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("club", "+", {"damage": "1d6"}),
                 new whatwentwrong.Stuff("stinky panther pelt", ".")
             ],
             "Savage Tribesman": [
-                new whatwentwrong.Stuff("stone-tipped spear", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("stone-tipped spear", "+", {"damage": "1d6"}), //TODO: polearm
                 new whatwentwrong.Stuff("big wicker shield", ".", {"shield": true}), 
                 new whatwentwrong.Stuff("loincloth", ".")
             ],
             "Nyarlathotepite Soldier": [
-                new whatwentwrong.Stuff("bronze khopesh", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze khopesh", "+", {"damage": "1d6"}), //Maybe 1d8 damage?
                 new whatwentwrong.Stuff("bronze shield", ".", {"shield": true}),
-                new whatwentwrong.Stuff("shortbow", "+"), //TODO: ranged weapon
+                new whatwentwrong.Stuff("shortbow", "+", {"damage": "1d6"}), //TODO: ranged weapon
                 new whatwentwrong.Stuff("20 arrows in a quiver", "+"),
                 new whatwentwrong.Stuff("linen skirt", "."),
                 new whatwentwrong.Stuff("head-dress", "."),
                 new whatwentwrong.Stuff("sandals", ".")
             ],
             "Nyarlathotepite Citizen": [
-                new whatwentwrong.Stuff("bronze dagger", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze dagger", "+", {"damage": "1d4"}),
                 new whatwentwrong.Stuff("clay bead jewelry everywhere", "."),
                 new whatwentwrong.Stuff("linen skirt", "."),
                 new whatwentwrong.Stuff("head-dress", "."),
                 new whatwentwrong.Stuff("sandals", ".")
             ],
             "Cultist": [
-                new whatwentwrong.Stuff("ceremonial staff", "+"), //TODO: weapon
-                new whatwentwrong.Stuff("bronze knife", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("ceremonial staff", "+", {"damage": "1d8"}),
+                new whatwentwrong.Stuff("bronze knife", "+", {"damage": "1d4"}),
                 new whatwentwrong.Stuff("hooded linen robe", "."),
                 new whatwentwrong.Stuff("sandals", ".")
             ],
             "Damned Isles Sailor": [
-                new whatwentwrong.Stuff("bronze cutlass", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze cutlass", "+", {"damage": "1d8"}),
                 new whatwentwrong.Stuff("canvas vest", "."),
                 new whatwentwrong.Stuff("canvas trousers", "."),
                 new whatwentwrong.Stuff("sick boots", ".")
             ],
             "Badass Metal Viking": [
-                new whatwentwrong.Stuff("iron horned helmet", ".", {"breakable": true}), //TODO: weapon?
-                new whatwentwrong.Stuff("iron battle-ax", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("iron horned helmet", ".", {"breakable": true, "damage": "1d3"}),
+                new whatwentwrong.Stuff("iron battle-ax", "+", {"damage": "1d8"}),
                 new whatwentwrong.Stuff("ring mail", ".", {"armor": "chain"}), 
                 new whatwentwrong.Stuff("shaggy cloak", "."),
                 new whatwentwrong.Stuff("wool tunic", "."),
@@ -160,7 +160,7 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("leather shoes", ".")
             ],
             "Chevalier Hurlant": [
-                new whatwentwrong.Stuff("brass lance", "*"), //TODO: weapon
+                new whatwentwrong.Stuff("brass lance", "*", {"damage": "1d10"}), //TODO: polearm
                 new whatwentwrong.Stuff("chrome steel plate armor", "+", {"armor": "plate"}), 
                 new whatwentwrong.Stuff("skull-face helmet", ".", {"breakable": true}),
                 new whatwentwrong.Stuff("wooden targe, (detail arms)", ".", {"shield": true}),
@@ -168,7 +168,7 @@ qx.Class.define("whatwentwrong.Table", {
                 new whatwentwrong.Stuff("death machine", ".")
             ],
             "Kethelneshi Gladiator": [
-                new whatwentwrong.Stuff("bronze gladius", "+"), //TODO: weapon
+                new whatwentwrong.Stuff("bronze gladius", "+", {"damage": "1d6"}), //1d8?
                 new whatwentwrong.Stuff("bronze grilled helmet", ".", {"breakable": true}),
                 new whatwentwrong.Stuff("leather battle-harness", "."), //Probably not armor?
                 new whatwentwrong.Stuff("bronze scale sleeve", "+", {"breakable": true}),
@@ -201,7 +201,7 @@ qx.Class.define("whatwentwrong.Table", {
             new whatwentwrong.Stuff("pet lizardwolf (2 HD, 14 AC, loyal unto death)", "."),
             new whatwentwrong.Stuff("a small sphere (2\" diameter) made of a hard translucent substance, origin unknown", "."),
             new whatwentwrong.Stuff("wooden flute", "+"),
-            new whatwentwrong.Stuff("net (designed for fishing but maybe could hold a monster)", "+"), //TODO: weapon?
+            new whatwentwrong.Stuff("net (designed for fishing but maybe could hold a monster)", "+"),
             //"7 foot length of stout iron chain",
             new whatwentwrong.Stuff("Zardoz mask", "."),
             new whatwentwrong.Stuff("riding lizard", "."),

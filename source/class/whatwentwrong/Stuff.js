@@ -21,6 +21,10 @@ qx.Class.define("whatwentwrong.Stuff", {
             init: null,
             nullable: true
         }
+        damage: {
+            init: null,
+            nullable: true
+        }
     },
 
     construct: function(description, weight, kwargs) {
@@ -59,6 +63,9 @@ qx.Class.define("whatwentwrong.Stuff", {
             }
             if (this.getBreakable() && !this.getShield()) {
                 stats.push("breakable");
+            }
+            if (this.getDamage()) {
+                stats.push(this.getDamage() + " damage")
             }
             if (stats.length > 0) {
                 outstring += " [";
