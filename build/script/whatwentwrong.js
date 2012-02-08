@@ -19,7 +19,7 @@ qx.$$packageData = {};
 
 qx.$$loader = {
   parts : {"boot":[0]},
-  packages : {"0":{"uris":["__out__:whatwentwrong.6fc154b23e6b.js"]}},
+  packages : {"0":{"uris":["__out__:whatwentwrong.d4b3b4a210c4.js"]}},
   urisBefore : [],
   cssBefore : [],
   boot : "boot",
@@ -10919,129 +10919,169 @@ d.update();
 b.add(c);
 }}});
 })();
-(function(){var k="\t",j="",h="\n",g="Number",f="String",e="Female",d="Male",c=" Person",b="changePsionic",a="Boolean",be="CON",bd="whatwentwrong.Character",bc="changeRace",bb="CONmod",ba="Sex: ",Y="changeCHAmod",X="CHAmod",W="STRmod",V="singleton",U="INTmod",r="WIS",s="Array",p="INT",q="Age: ",n="changeStuff",o="DEX",l="changeINTmod",m="changePref",v="CHA",w="changeLevel",E="You are psionic!\n",C="changeSex",L=" Boy",G="changeTechLevel",Q=" Girl",O="changeBackground",y="WISmod",T="changeDEXmod",S="changeCONmod",R="changeSTRmod",x="Tech Level: ",A="DEXmod",B="changeAge",D="Race: ",F="changeName",H="Stuff:\n",M=" Man",P=" Woman",t="changeClass",u="Name: ",z="Sexual Preference: ",K="changeXp",J="CHA\tCON\tDEX\tINT\tSTR\tWIS\n",I="changeWISmod",N="STR";
-qx.Class.define(bd,{extend:qx.core.Object,type:V,properties:{name:{check:f,event:F,init:j},clazz:{check:f,event:t,init:j},level:{check:g,event:w,init:0},xp:{check:g,event:K,init:0},age:{check:g,event:B,init:0},race:{check:f,event:bc,init:j},sex:{check:f,event:C,init:j},pref:{check:f,event:m,init:j},techLevel:{check:f,event:G,init:j},stuff:{check:s,event:n,init:[]},background:{check:f,event:O,init:j},CHA:{check:"Number",event:"changeCHA",init:0},CON:{check:"Number",event:"changeCON",init:0},DEX:{check:"Number",event:"changeDEX",init:0},INT:{check:"Number",event:"changeINT",init:0},STR:{check:"Number",event:"changeSTR",init:0},WIS:{check:"Number",event:"changeWIS",init:0},CHAmod:{check:g,event:Y,init:-1000},CONmod:{check:g,event:S,init:-1000},DEXmod:{check:g,event:T,init:-1000},INTmod:{check:g,event:l,init:-1000},STRmod:{check:g,event:R,init:-1000},WISmod:{check:g,event:I,init:-1000},psionic:{check:a,event:b,nullable:true,init:null}},construct:function(){var bf={converter:function(bg,bh,bi,bj){return whatwentwrong.Table.getInstance().statmods[bg];
+(function(){var k="",j="\t",h="\n",g="Number",f="String",e="Female",d="Male",c=" Person",b="changePsionic",a="Boolean",bf="CON",be="whatwentwrong.Character",bd="changeRace",bc="CONmod",bb="Sex: ",ba="changeCHAmod",Y="CHAmod",X="STRmod",W="singleton",V="INTmod",r="WIS",s="Array",p="INT",q="Age: ",n="changeStuff",o="DEX",l="changeINTmod",m="changePref",v="CHA",w="changeLevel",E="You are psionic!\n",C="changeSex",L=" Boy",G="changeTechLevel",R=" Girl",P="changeBackground",y="WISmod",U="AC\n",T="changeDEXmod",S="changeCONmod",x="changeSTRmod",A="Tech Level: ",B="DEXmod",D="changeAge",F="Race: ",H="changeName",M="Stuff:\n",Q=" Man",t=" Woman",u="changeClass",z="Name: ",K="Sexual Preference: ",J="changeXp",I="CHA\tCON\tDEX\tINT\tSTR\tWIS\n",O="changeWISmod",N="STR";
+qx.Class.define(be,{extend:qx.core.Object,type:W,properties:{name:{check:f,event:H,init:k},clazz:{check:f,event:u,init:k},level:{check:g,event:w,init:0},xp:{check:g,event:J,init:0},age:{check:g,event:D,init:0},race:{check:f,event:bd,init:k},sex:{check:f,event:C,init:k},pref:{check:f,event:m,init:k},techLevel:{check:f,event:G,init:k},stuff:{check:s,event:n,init:[]},background:{check:f,event:P,init:k},CHA:{check:"Number",event:"changeCHA",init:0},CON:{check:"Number",event:"changeCON",init:0},DEX:{check:"Number",event:"changeDEX",init:0},INT:{check:"Number",event:"changeINT",init:0},STR:{check:"Number",event:"changeSTR",init:0},WIS:{check:"Number",event:"changeWIS",init:0},CHAmod:{check:g,event:ba,init:-1000},CONmod:{check:g,event:S,init:-1000},DEXmod:{check:g,event:T,init:-1000},INTmod:{check:g,event:l,init:-1000},STRmod:{check:g,event:x,init:-1000},WISmod:{check:g,event:O,init:-1000},psionic:{check:a,event:b,nullable:true,init:null}},construct:function(){var bg={converter:function(bh,bi,bj,bk){return whatwentwrong.Table.getInstance().statmods[bh];
 }};
-this.bind(v,this,X,bf);
-this.bind(be,this,bb,bf);
-this.bind(o,this,A,bf);
-this.bind(p,this,U,bf);
-this.bind(N,this,W,bf);
-this.bind(r,this,y,bf);
+this.bind(v,this,Y,bg);
+this.bind(bf,this,bc,bg);
+this.bind(o,this,B,bg);
+this.bind(p,this,V,bg);
+this.bind(N,this,X,bg);
+this.bind(r,this,y,bg);
 this.generate();
-},members:{toString:function(){var bk=j;
-bk+=this.stringName();
-bk+=this.stringRace();
-bk+=this.stringAge();
-bk+=this.stringSex();
-bk+=this.stringPref();
-bk+=this.stringTechLevel();
-bk+=this.stringStats();
-bk+=this.stringStuff();
-bk+=this.stringBackground();
-bk+=this.stringPsionic();
-return bk;
-},stringPsionic:function(){if(this.getPsionic()){return E;
-}else{return j;
-}},stringStats:function(){var bl=j;
-bl+=J;
-bl+=this.getCHA()+k+this.getCON()+k+this.getDEX()+k+this.getINT()+k+this.getSTR()+k+this.getWIS()+h;
-bl+=this.getCHAmod()+k+this.getCONmod()+k+this.getDEXmod()+k+this.getINTmod()+k+this.getSTRmod()+k+this.getWISmod()+h;
+},members:{toString:function(){var bl=k;
+bl+=this.stringName();
+bl+=this.stringRace();
+bl+=this.stringAge();
+bl+=this.stringSex();
+bl+=this.stringPref();
+bl+=this.stringTechLevel();
+bl+=this.stringStats();
+bl+=this.stringStuff();
+bl+=this.stringBackground();
+bl+=this.stringPsionic();
 return bl;
-},stringName:function(){return u+this.getName()+h;
-},stringRace:function(){var bm=D+this.getRace();
-
-if(this.getAge()<=16){if(this.getSex()==d){bm+=L;
-}else if(this.getSex()==e){bm+=Q;
-}else{bm+=c;
-}}else{if(this.getSex()==d){bm+=M;
-}else if(this.getSex()==e){bm+=P;
-}else{bm+=c;
-}}bm+=h;
+},stringPsionic:function(){if(this.getPsionic()){return E;
+}else{return k;
+}},stringStats:function(){var bm=k;
+bm+=I;
+bm+=this.getCHA()+j+this.getCON()+j+this.getDEX()+j+this.getINT()+j+this.getSTR()+j+this.getWIS()+h;
+bm+=this.getCHAmod()+j+this.getCONmod()+j+this.getDEXmod()+j+this.getINTmod()+j+this.getSTRmod()+j+this.getWISmod()+h;
 return bm;
-},stringAge:function(){return q+this.getAge()+h;
-},stringTechLevel:function(){return x+this.getTechLevel()+h;
-},stringSex:function(){return ba+this.getSex()+h;
-},stringPref:function(){return z+this.getPref()+h;
-},stringStuff:function(){var bn=H;
+},stringDerivedStats:function(){var bn=k;
+bn+=U;
+bn+=this.getAC()+h;
+return bn;
+},stringName:function(){return z+this.getName()+h;
+},stringRace:function(){var bo=F+this.getRace();
 
-for(var i=0;i<this.getStuff().length;i++){bn+=this.getStuff()[i].toString();
-}return bn;
+if(this.getAge()<=16){if(this.getSex()==d){bo+=L;
+}else if(this.getSex()==e){bo+=R;
+}else{bo+=c;
+}}else{if(this.getSex()==d){bo+=Q;
+}else if(this.getSex()==e){bo+=t;
+}else{bo+=c;
+}}bo+=h;
+return bo;
+},stringAge:function(){return q+this.getAge()+h;
+},stringTechLevel:function(){return A+this.getTechLevel()+h;
+},stringSex:function(){return bb+this.getSex()+h;
+},stringPref:function(){return K+this.getPref()+h;
+},stringStuff:function(){var bp=M;
+
+for(var i=0;i<this.getStuff().length;i++){bp+=this.getStuff()[i].toString();
+}return bp;
 },stringBackground:function(){return this.getBackground()+h;
-},generate:function(){var bo=whatwentwrong.Table.getInstance();
+},generate:function(){var bq=whatwentwrong.Table.getInstance();
 this.setLevel(1);
 this.setXp(0);
 this.generatestats();
-this.setAge(10+bo.dieroll(4,3));
+this.setAge(10+bq.dieroll(4,3));
 
-if(bo.chanceroll(bo.racechance)){this.setRace(bo.select(bo.lowchanceraces));
-}else{this.setRace(bo.select(bo.highchanceraces));
+if(bq.chanceroll(bq.racechance)){this.setRace(bq.select(bq.lowchanceraces));
+}else{this.setRace(bq.select(bq.highchanceraces));
 }
-if(bo.chanceroll(bo.sexchance)){this.setSex(bo.select(bo.lowchancesexes));
-}else{this.setSex(bo.select(bo.highchancesexes));
+if(bq.chanceroll(bq.sexchance)){this.setSex(bq.select(bq.lowchancesexes));
+}else{this.setSex(bq.select(bq.highchancesexes));
 }
-if(bo.chanceroll(bo.prefchance)){this.setPref(bo.select(bo.lowchanceprefs));
-}else{this.setPref(bo.select(bo.highchanceprefs));
-}this.setTechLevel(bo.select(bo.techlevels));
+if(bq.chanceroll(bq.prefchance)){this.setPref(bq.select(bq.lowchanceprefs));
+}else{this.setPref(bq.select(bq.highchanceprefs));
+}this.setTechLevel(bq.select(bq.techlevels));
 this.debug(this.getTechLevel());
-this.setStuff(qx.lang.Array.clone(bo.stuffbytechlevel[this.getTechLevel()]));
-this.getStuff().push(bo.select(bo.deckostuff));
-this.setBackground(bo.select(bo.backgrounds));
-this.setPsionic(bo.checkforpsionics(this.getCHA(),this.getINT(),this.getWIS()));
-},generatestats:function(){var bq=-1000;
-var bp=whatwentwrong.Table.getInstance();
+this.setStuff(qx.lang.Array.clone(bq.stuffbytechlevel[this.getTechLevel()]));
+this.getStuff().push(bq.select(bq.deckostuff));
+this.setBackground(bq.select(bq.backgrounds));
+this.setPsionic(bq.checkforpsionics(this.getCHA(),this.getINT(),this.getWIS()));
+},generatestats:function(){var bs=-1000;
+var br=whatwentwrong.Table.getInstance();
 
-while(bq<0){this.setCHA(bp.dieroll(6,3));
-this.setCON(bp.dieroll(6,3));
-this.setDEX(bp.dieroll(6,3));
-this.setINT(bp.dieroll(6,3));
-this.setSTR(bp.dieroll(6,3));
-this.setWIS(bp.dieroll(6,3));
-bq=this.getCHAmod()+this.getCONmod()+this.getDEXmod()+this.getINTmod()+this.getSTRmod()+this.getWIS();
-}}}});
-})();
-(function(){var m="",l="normal",k="+",j="heavy",i="* ",h=". ",g="whatwentwrong.Stuff",f="+ ",e="\n",d=".",a="String",c="*",b="light";
-qx.Class.define(g,{extend:qx.core.Object,properties:{description:{check:a,init:m},weight:{init:l}},construct:function(n,o){if(n){this.setDescription(n);
+while(bs<0){this.setCHA(br.dieroll(6,3));
+this.setCON(br.dieroll(6,3));
+this.setDEX(br.dieroll(6,3));
+this.setINT(br.dieroll(6,3));
+this.setSTR(br.dieroll(6,3));
+this.setWIS(br.dieroll(6,3));
+bs=this.getCHAmod()+this.getCONmod()+this.getDEXmod()+this.getINTmod()+this.getSTRmod()+this.getWIS();
+}},getAC:function(){var bu=12+this.getDEXmod();
+var bt=whatwentwrong.Table.getInstance();
+var bv=false;
+this.debug(this.getStuff());
+this.debug(this.getStuff()[0]);
+
+for(var i=0;i<this.getStuff().length;i++){var bw=this.getStuff()[i];
+
+if(bw.getArmor()&&bt.AC[bw.getArmor()]>bu){bu=bt.AC[bw.getArmor()];
 }
-if(o){this.setWeight(o);
-}},members:{toString:function(){var p=m;
-
-if(this.getWeight()==b||this.getWeight()==d||this.getWeight()==0){p+=h;
-}else if(this.getWeight()==l||this.getWeight()==k||this.getWeight()==1){p+=f;
-}else if(this.getWeight()==j||this.getWeight()==c){p+=i;
-}else{p+=this.getWeight();
-}p+=this.getDescription()+e;
-return p;
+if(bw.getShield()){bv=true;
+}}
+if(bv){bu+=1;
+}return bu;
 }}});
 })();
-(function(){var cN=".",cM="+",cL="*",cK="Savage Tribesman",cJ="Nyarlathotepite Citizen",cI="sandals",cH="Cultist",cG="Cave Dweller",cF="head-dress",cE="Badass Metal Viking",bN="bronze shield",bM="Damned Isles Sailor",bL="Total Throwback",bK="linen skirt",bJ="Chevalier Hurlant",bI="Nyarlathotepite Soldier",bH="You hear voices sometimes, horrid alien whisperings.",bG="iron horned helmet",bF="the skull of your brother (long story)",bE="a small sphere (2\" diameter) made of a hard translucent substance, origin unknown",cU="You have got a knack for figuring out alien technology.",cV="You have got some wicked awesome tattoos.",cS="Orange",cT="a bronze helmet shaped like an ant's head",cQ="singleton",cR="an air-bladder, removed from the gizzard of a dinosaur",cO="Into robots.",cP="sick boots",cW="Your father was Master Grim, one of the seven sorcerers of Kethelnesh.",cX="stone-tipped spear",cn="leather battle-harness",cm="This crazy old man keeps showing up, proclaming you some sort of messiah.",cp="a rowan wood shield, from another world",co="club",cr="Intelligence",cq="You know where some sorcerer stashed a scroll describing a ritual.",ct="a wicker cage",cs="loincloth",cl="random ray pistol",ck="a rotten old pterodactyl egg (makes a great stink bomb)",l="black gambeson",m="wooden targe, (detail arms)",n="Brown",o="a bear-skin",p="Into something kinky, please fill in.",q="You are an excellent dino-rider.",r="wool tunic",s="bronze khopesh",t="bronze cutlass",u="You have got this awesome silvery cyborg arm. (long story)",dm="You can see into the infrared, but anything purple is invisible to you.",dl="Female",dk="a dolm meteorite",dj="hooded linen robe",dr="Into everything.",dq="a sealed clay pot containing a few hundred deathmaggots (do not fall while carrying!)",dp="leather shoes",dn="3 doses of hallucinogenic mushrooms",dt="wool leggings",ds="pet lizardwolf (2 HD, 14 AC, loyal unto death)",be="the right hand of an unknown stone statue",bf="a wooden Nyarlathotepite barque, 75' long",bc="5 poorly made torches (only burn 4 or 5 turns each)",bd="You have got this wicked scar from a bad run-in with a carnosaur.",bi="big wicker shield",bj="a black basalt icon of the goddess Abhoth in the form of a billy-goat",bg="45 feet of rope made of human hair",bh="Black",ba="stinky panther pelt",bb="Male",M="Into ladies, but once in a while when you get drunk...",L="Your father was a Deep One.",O="bronze gladius",N="a stick of chalk",I="dowsing rod",H="wooden flute",K="alien computer access medallion (looks like you wear it to the disco)",J="Ulfire",G="net (designed for fishing but maybe could hold a monster)",F="bronze grilled helmet",bo="death machine",bp="bronze scale sleeve",bq="You want to see the Lost City of Carcosa, before you die.",br="the tooth of a smilodon",bk="Into dinosaurs.",bl="Your father was a tribal Chieftan.",bm="Kethelneshi Gladiator",bn="Strength",bs="2 doses of Jale Lotus",bt="a mummified male member",W="a gourd full of some putrid alcoholic beverage",V="ring mail",U="alien plastic sword that whistles music through the air as it swings",T="You are a mutant. Roll one Mutation out of the book.",S="a Kethelneshite razor shield",R="Red",Q="You saved this one dudes life and now hes your loyal follower.",P="You do not know how to swim.",Y="the severed arm of a Voormi, one of the hairy men of the mountains",X="ceremonial staff",bu="steel helmet, with no opening for the eyes",bv="clay bead jewelry everywhere",bw="a chunk of flint and a small bit of alien metal that works almost as well as steel would",bx="Jale",by="ultratelluric steel helm, with velociraptor plume",bz="skull-face helmet",bA="bronze knife",bB="partially functional head of an ancient, insane robot",bC="Green",bD="Constitution",bR="whatwentwrong.Table",bQ="Into grey aliens.",bP="Dolm",bO="stick of red ochre",bV="a strangely elliptical gold diadem, it doesn't quite fit a human head",bU="Yellow",bT="lantern holding some sort of slug-like bio-luminescent lifeform",bS="sneakers",bX="a space alien grenade. Roll on the table",bW="riding lizard",cg="small bag filled with fine white sand",ch="skin full of brackish water",ce="a bronze saw",cf="shortbow",cc="plate armor made from a broken robot",cd="You are an excellent tracker.",ca="brass lance",cb="Into dudes",ci="Into tentacled horrors.",cj="Your hair is a funky color like pink or green or something.",cx="Charisma",cw="bronze dagger",cz="flea-ridden cloak",cy="leather and iron cestus",cB="a huge club made from a thagomizer",cA="Into dudes, but once in a while when you get drunk...",cD="Some sort of terminator robot is hunting your sorry ass.",cC="a copper bracer with some useless \"anti-demon\" rune on it",cv="9 foot pole of fibrous fungal matter",cu="White",df="Wisdom",dg="5 doses of White Lotus",dh="2 doses of Black Lotus, 3 doses of Blue Lotus",di="Arcology Fugitive",db="a bone whistle",dc="canvas trousers",dd="polyester jumpsuit",de="Your blood runs green. You dont know why.",cY="a largish lump of low grade gold (worth d100gp if buyer can be found)",da="Into dudes and ladies.",k="vanadium collar",j="Hermaphrodite",h="iron battle-ax",g="Earth",f="Blue",e="chrome steel plate armor",d="shaggy cloak",c="No interest.",b="Bone",a="a bunch of dried witchroot",x="Dexterity",y="a dozen small lumpy purple pear-like fruits wrapped in a bit of weaseloid fur (maybe enough for two or three small meals)",v="Into really sexy plants.",w="Zardoz mask",B="Into ladies.",C="canvas vest",z="Hard to say",A="20 arrows in a quiver",D="cool necklace of animal fangs and claws",E="Purple",bY="a child slave";
-qx.Class.define(bR,{extend:Object,type:cQ,members:{stats:[cx,bD,x,cr,bn,df],statmods:[-1000,-1000,-1000,-3,-2,-2,-1,-1,-1,0,0,0,0,1,1,1,2,2,3],highchanceraces:[bh,f,n,bP,bC,bx,cS,E,R,b,J,cu,bU],lowchanceraces:[g],racechance:0.01,highchancesexes:[bb,dl],lowchancesexes:[j,z],sexchance:0.02,highchanceprefs:[cb,cA,da,M,B,p],lowchanceprefs:[c,cO,ci,bQ,bk,v,dr],prefchance:0.05,techlevels:[bL,bL,cG,cG,cG,cK,cK,cK,cK,cH,cH,cH,bM,bM,cJ,cJ,cJ,cJ,bI,bI,cE,cE,bm,bJ,bJ,di],stuffbytechlevel:{"Total Throwback":[],"Cave Dweller":[new whatwentwrong.Stuff(co,cM),new whatwentwrong.Stuff(ba,cN)],"Savage Tribesman":[new whatwentwrong.Stuff(cX,cM),new whatwentwrong.Stuff(bi,cN),new whatwentwrong.Stuff(cs,cN)],"Nyarlathotepite Soldier":[new whatwentwrong.Stuff(s,cM),new whatwentwrong.Stuff(bN,cN),new whatwentwrong.Stuff(cf,cM),new whatwentwrong.Stuff(A,cM),new whatwentwrong.Stuff(bK,cN),new whatwentwrong.Stuff(cF,cN),new whatwentwrong.Stuff(cI,cN)],"Nyarlathotepite Citizen":[new whatwentwrong.Stuff(cw,cM),new whatwentwrong.Stuff(bv,cN),new whatwentwrong.Stuff(bK,cN),new whatwentwrong.Stuff(cF,cN),new whatwentwrong.Stuff(cI,cN)],"Cultist":[new whatwentwrong.Stuff(X,cM),new whatwentwrong.Stuff(bA,cM),new whatwentwrong.Stuff(dj,cN),new whatwentwrong.Stuff(cI,cN)],"Damned Isles Sailor":[new whatwentwrong.Stuff(t,cM),new whatwentwrong.Stuff(C,cN),new whatwentwrong.Stuff(dc,cN),new whatwentwrong.Stuff(cP,cN)],"Badass Metal Viking":[new whatwentwrong.Stuff(bG,cN),new whatwentwrong.Stuff(h,cM),new whatwentwrong.Stuff(V,cN),new whatwentwrong.Stuff(d,cN),new whatwentwrong.Stuff(r,cN),new whatwentwrong.Stuff(dt,cN),new whatwentwrong.Stuff(dp,cN)],"Chevalier Hurlant":[new whatwentwrong.Stuff(ca,cL),new whatwentwrong.Stuff(e,cM),new whatwentwrong.Stuff(bz,cN),new whatwentwrong.Stuff(m,cN),new whatwentwrong.Stuff(l,cN),new whatwentwrong.Stuff(bo,cN)],"Kethelneshi Gladiator":[new whatwentwrong.Stuff(O,cM),new whatwentwrong.Stuff(F,cN),new whatwentwrong.Stuff(cn,cN),new whatwentwrong.Stuff(bp,cM),new whatwentwrong.Stuff(bN,cN)],"Arcology Fugitive":[new whatwentwrong.Stuff(dd,cN),new whatwentwrong.Stuff(cl,cM),new whatwentwrong.Stuff(k,cM),new whatwentwrong.Stuff(bS,cN)]},deckostuff:[new whatwentwrong.Stuff(bc,5),new whatwentwrong.Stuff(bg,cM),new whatwentwrong.Stuff(ch,cM),new whatwentwrong.Stuff(D,cN),new whatwentwrong.Stuff(bO,cN),new whatwentwrong.Stuff(cz,cN),new whatwentwrong.Stuff(W,cM),new whatwentwrong.Stuff(cC,cN),new whatwentwrong.Stuff(dn,cM),new whatwentwrong.Stuff(y,cM),new whatwentwrong.Stuff(bw,cM),new whatwentwrong.Stuff(bF,cM),new whatwentwrong.Stuff(ck,cM),new whatwentwrong.Stuff(cY,cM),new whatwentwrong.Stuff(K,cN),new whatwentwrong.Stuff(dq,cM),new whatwentwrong.Stuff(ds,cN),new whatwentwrong.Stuff(bE,cN),new whatwentwrong.Stuff(H,cM),new whatwentwrong.Stuff(G,cM),new whatwentwrong.Stuff(w,cN),new whatwentwrong.Stuff(bW,cN),new whatwentwrong.Stuff(bT,cM),new whatwentwrong.Stuff(cg,cM),new whatwentwrong.Stuff(be,cM),new whatwentwrong.Stuff(a,cM),new whatwentwrong.Stuff(I,cM),new whatwentwrong.Stuff(cv,cL),new whatwentwrong.Stuff(bB,cM),new whatwentwrong.Stuff(bV,cM),new whatwentwrong.Stuff(cR,cN),new whatwentwrong.Stuff(o,cN),new whatwentwrong.Stuff(Y,cM),new whatwentwrong.Stuff(bX,cM),new whatwentwrong.Stuff(bY,cN),new whatwentwrong.Stuff(db,cN),new whatwentwrong.Stuff(dh,cN),new whatwentwrong.Stuff(bs,cN),new whatwentwrong.Stuff(dg,cN),new whatwentwrong.Stuff(cp,cN),new whatwentwrong.Stuff(br,cM),new whatwentwrong.Stuff(by,cN),new whatwentwrong.Stuff(U,cM),new whatwentwrong.Stuff(bf,cN),new whatwentwrong.Stuff(cc,cM),new whatwentwrong.Stuff(bj,cM),new whatwentwrong.Stuff(dk,cM),new whatwentwrong.Stuff(S,cN),new whatwentwrong.Stuff(cT,cN),new whatwentwrong.Stuff(N,cN),new whatwentwrong.Stuff(ct,cM),new whatwentwrong.Stuff(ce,cM),new whatwentwrong.Stuff(bt,cN),new whatwentwrong.Stuff(cB,cL),new whatwentwrong.Stuff(cy,cL),new whatwentwrong.Stuff(bu,cN)],backgrounds:[Q,cj,q,de,dm,bH,cD,cd,cm,T,bd,cV,P,cq,u,cU,bq,L,bl,cW],checkforpsionics:function(du,dv,dw){var dx=0;
-
-if(dv==15){dx+=.01;
-}else if(dv==16){dx+=.02;
-}else if(dv==17){dx+=.03;
-}else if(dv==18){dx+=.04;
+(function(){var j="breakable",i="",h="normal",g="range ",f=" damage",e="+",d="+1 AC",c="heavy",b="whatwentwrong.Stuff",a="reach",v="light",u="String",t="*",s=". ",r="]",q=", ",p="AC ",o="\n",n="* ",m="+ ",k=".",l=" [";
+qx.Class.define(b,{extend:qx.core.Object,properties:{description:{check:u,init:i},weight:{init:h},armor:{init:null,nullable:true},shield:{init:null,nullable:true},breakable:{init:null,nullable:true},damage:{init:null,nullable:true},reach:{init:null,nullable:true},range:{init:null,nullable:true}},construct:function(w,x,y){if(w){this.setDescription(w);
 }
-if(dw==15){dx+=.005;
-}else if(dw==16){dx+=.01;
-}else if(dw==17){dx+=.015;
-}else if(dw==18){dx+=.02;
+if(x){this.setWeight(x);
 }
-if(du==15){dx+=.015;
-}else if(du==16){dx+=.03;
-}else if(du==17){dx+=.045;
-}else if(du==18){dx+=.06;
-}return this.chanceroll(dx);
-},chanceroll:function(dy){var dz=Math.random();
-return (dz<=dy);
-},dieroll:function(dA,dB){if(!dB){dB=1;
-}var dC=0;
+if(y){this.set(y);
+}},members:{toString:function(){var B=i;
+var z=whatwentwrong.Table.getInstance();
 
-for(var i=0;i<dB;i++){var dD=Math.ceil(Math.random()*dA);
-dC+=dD;
-}return dC;
-},select:function(dE){var dF=Math.floor(Math.random()*dE.length);
-return dE[dF];
+if(this.getWeight()==v||this.getWeight()==k||this.getWeight()==0){B+=s;
+}else if(this.getWeight()==h||this.getWeight()==e||this.getWeight()==1){B+=m;
+}else if(this.getWeight()==c||this.getWeight()==t){B+=n;
+}else{B+=this.getWeight();
+}B+=this.getDescription();
+var A=[];
+
+if(this.getArmor()){A.push(p+z.AC[this.getArmor()]);
+}
+if(this.getShield()){A.push(d);
+A.push(j);
+}
+if(this.getBreakable()&&!this.getShield()){A.push(j);
+}
+if(this.getDamage()){A.push(this.getDamage()+f);
+}
+if(this.getReach()){A.push(a);
+}
+if(this.getRange()){A.push(g+this.getRange());
+}
+if(A.length>0){B+=l;
+B+=A.join(q);
+B+=r;
+}B+=o;
+return B;
+}}});
+})();
+(function(){var cX=".",cW="+",cV="1d4",cU="1d6",cT="1d8",cS="Savage Tribesman",cR="sandals",cQ="*",cP="Nyarlathotepite Citizen",cO="Cultist",bR="Cave Dweller",bQ="Kethelneshi Plebeian",bP="conceiled bronze balisong",bO="head-dress",bN="Kethelneshi Gladiator",bM="bronze shield",bL="Damned Isles Sailor",bK="Total Throwback",bJ="plate",bI="linen skirt",df="Chevalier Hurlant",dg="Nyarlathotepite Soldier",dd="You hear voices sometimes, horrid alien whisperings.",de="iron horned helmet",db="the skull of your brother (long story)",dc="a small sphere (2\" diameter) made of a hard translucent substance, origin unknown",cY="You have got a knack for figuring out alien technology.",da="You have got some wicked awesome tattoos.",dh="Orange",di="a bronze helmet shaped like an ant's head",cx="singleton",cw="Into robots.",cz="sick boots",cy="Your father was Master Grim, one of the seven sorcerers of Kethelnesh.",cB="hemp tunica",cA="stone-tipped spear",cD="leather battle-harness",cC="This crazy old man keeps showing up, proclaming you some sort of messiah.",cv="a rowan wood shield, from another world",cu="club",l="Intelligence",m="You know where some sorcerer stashed a scroll describing a ritual.",n="a wicker cage",o="loincloth",p="chain",q="random ray pistol",r="a rotten old pterodactyl egg (makes a great stink bomb)",s="black gambeson",t="Brown",u="a bear-skin",dx="Into something kinky, please fill in.",dw="You are an excellent dino-rider.",dv="wool tunic",du="bronze khopesh",dB="wooden targe, (detail arms)",dA="bronze cutlass",dz="You have got this awesome silvery cyborg arm. (long story)",dy="10'/20'/60'",dD="You can see into the infrared, but anything purple is invisible to you.",dC="Female",bh="a dolm meteorite",bi="hooded linen robe",bf="Into everything.",bg="a sealed clay pot containing a few hundred deathmaggots (do not fall while carrying!)",bl="leather shoes",bm="3 doses of hallucinogenic mushrooms",bj="wool leggings",bk="pet lizardwolf (2 HD, 14 AC, loyal unto death)",bd="the right hand of an unknown stone statue",be="Badass Metal Viking",M="a wooden Nyarlathotepite barque, 75' long",L="1d3",O="You have got this wicked scar from a bad run-in with a carnosaur.",N="big wicker shield",I="a black basalt icon of the goddess Abhoth in the form of a billy-goat",H="45 feet of rope made of human hair",K="Black",J="stinky panther pelt",G="Male",F="Into ladies, but once in a while when you get drunk...",br="Your father was a Deep One.",bs="bronze gladius",bt="a stick of chalk",bu="1d10",bn="dowsing rod",bo="wooden flute",bp="alien computer access medallion (looks like you wear it to the disco)",bq="Ulfire",bv="net (designed for fishing but maybe could hold a monster)",bw="bronze grilled helmet",X="death machine",W="bronze scale sleeve",V="the tooth of a smilodon",U="Into dinosaurs.",T="Your father was a tribal Chieftan.",S="Strength",R="2 doses of Jale Lotus",Q="a mummified male member",bc="a gourd full of some putrid alcoholic beverage",bb="ring mail",bx="alien plastic sword that whistles music through the air as it swings",by="You are a mutant. Roll one Mutation out of the book.",bz="a Kethelneshite razor shield",bA="Red",bB="You saved this one dudes life and now hes your loyal follower.",bC="You do not know how to swim.",bD="the severed arm of a Voormi, one of the hairy men of the mountains",bE="ceremonial staff",bF="steel helmet, with no opening for the eyes",bG="clay bead jewelry everywhere",bY="a chunk of flint and a small bit of alien metal that works almost as well as steel would",bX="Jale",bW="ultratelluric steel helm, with velociraptor plume",bV="skull-face helmet",cd="bronze knife",cc="partially functional head of an ancient, insane robot",cb="Green",ca="Constitution",cg="whatwentwrong.Table",cf="Into grey aliens.",cq="Dolm",cr="stick of red ochre",co="a strangely elliptical gold diadem, it doesn't quite fit a human head",cp="Yellow",cm="lantern holding some sort of slug-like bio-luminescent lifeform",cn="sneakers",ck="a space alien grenade. Roll on the table",cl="riding lizard",cs="50'/300'/450'",ct="skin full of brackish water",cH="a bronze saw",cG="shortbow",cJ="plate armor made from a broken robot",cI="You are an excellent tracker.",cL="brass lance",cK="Into dudes",cN="Into tentacled horrors.",cM="Your hair is a funky color like pink or green or something.",cF="Charisma",cE="bronze dagger",dq="flea-ridden cloak",dr="leather and iron cestus",ds="a huge club made from a thagomizer",dt="Into dudes, but once in a while when you get drunk...",dl="Some sort of terminator robot is hunting your sorry ass.",dm="a copper bracer with some useless \"anti-demon\" rune on it",dn="9 foot pole of fibrous fungal matter",dp="White",dj="Wisdom",dk="5 doses of White Lotus",k="5 poorly made torches (only burn 4 or 5 turns each)",j="2 doses of Black Lotus, 3 doses of Blue Lotus",h="Arcology Fugitive",g="a bone whistle",f="canvas trousers",e="polyester jumpsuit",d="a largish lump of low grade gold (worth d100gp if buyer can be found)",c="Your blood runs green. You dont know why.",b="Into dudes and ladies.",a="vanadium collar",x="Hermaphrodite",y="iron battle-ax",v="Earth",w="Blue",B="chrome steel plate armor",C="shaggy cloak",z="No interest.",A="Bone",D="a bunch of dried witchroot",E="Dexterity",ch="a dozen small lumpy purple pear-like fruits wrapped in a bit of weaseloid fur (maybe enough for two or three small meals)",ce="Into really sexy plants.",cj="Zardoz mask",ci="Into ladies.",bT="small bag filled with fine white sand",bS="canvas vest",P="Hard to say",bU="20 arrows in a quiver",ba="cool necklace of animal fangs and claws",Y="Purple",bH="a child slave";
+qx.Class.define(cg,{extend:Object,type:cx,members:{stats:[cF,ca,E,l,S,dj],statmods:[-1000,-1000,-1000,-3,-2,-2,-1,-1,-1,0,0,0,0,1,1,1,2,2,3],AC:{"leather":14,"chain":16,"plate":18},highchanceraces:[K,w,t,cq,cb,bX,dh,Y,bA,A,bq,dp,cp],lowchanceraces:[v],racechance:0.01,highchancesexes:[G,dC],lowchancesexes:[x,P],sexchance:0.02,highchanceprefs:[cK,dt,b,F,ci,dx],lowchanceprefs:[z,cw,cN,cf,U,ce,bf],prefchance:0.05,techlevels:[bK,bK,bR,bR,bR,cS,cS,cS,cS,cO,cO,cO,bL,bL,cP,cP,cP,dg,dg,be,bN,bN,bQ,bQ,bQ,df,df,h],stuffbytechlevel:{"Total Throwback":[],"Cave Dweller":[new whatwentwrong.Stuff(cu,cW,{"damage":cU}),new whatwentwrong.Stuff(J,cX)],"Savage Tribesman":[new whatwentwrong.Stuff(cA,cW,{"damage":cU,"reach":true,"range":dy}),new whatwentwrong.Stuff(N,cX,{"shield":true}),new whatwentwrong.Stuff(o,cX)],"Nyarlathotepite Soldier":[new whatwentwrong.Stuff(du,cW,{"damage":cU}),new whatwentwrong.Stuff(bM,cX,{"shield":true}),new whatwentwrong.Stuff(cG,cW,{"damage":cU,"range":cs}),new whatwentwrong.Stuff(bU,cW),new whatwentwrong.Stuff(bI,cX),new whatwentwrong.Stuff(bO,cX),new whatwentwrong.Stuff(cR,cX)],"Nyarlathotepite Citizen":[new whatwentwrong.Stuff(cE,cW,{"damage":cV}),new whatwentwrong.Stuff(bG,cX),new whatwentwrong.Stuff(bI,cX),new whatwentwrong.Stuff(bO,cX),new whatwentwrong.Stuff(cR,cX)],"Cultist":[new whatwentwrong.Stuff(bE,cW,{"damage":cT}),new whatwentwrong.Stuff(cd,cW,{"damage":cV}),new whatwentwrong.Stuff(bi,cX),new whatwentwrong.Stuff(cR,cX)],"Damned Isles Sailor":[new whatwentwrong.Stuff(dA,cW,{"damage":cT}),new whatwentwrong.Stuff(bS,cX),new whatwentwrong.Stuff(f,cX),new whatwentwrong.Stuff(cz,cX)],"Badass Metal Viking":[new whatwentwrong.Stuff(de,cX,{"breakable":true,"damage":L}),new whatwentwrong.Stuff(y,cW,{"damage":cT}),new whatwentwrong.Stuff(bb,cX,{"armor":p}),new whatwentwrong.Stuff(C,cX),new whatwentwrong.Stuff(dv,cX),new whatwentwrong.Stuff(bj,cX),new whatwentwrong.Stuff(bl,cX)],"Chevalier Hurlant":[new whatwentwrong.Stuff(cL,cQ,{"damage":bu,"reach":true}),new whatwentwrong.Stuff(B,cW,{"armor":bJ}),new whatwentwrong.Stuff(bV,cX,{"breakable":true}),new whatwentwrong.Stuff(dB,cX,{"shield":true}),new whatwentwrong.Stuff(s,cX),new whatwentwrong.Stuff(X,cX)],"Kethelneshi Gladiator":[new whatwentwrong.Stuff(bs,cW,{"damage":cU}),new whatwentwrong.Stuff(bw,cX,{"breakable":true}),new whatwentwrong.Stuff(cD,cX),new whatwentwrong.Stuff(W,cW,{"breakable":true}),new whatwentwrong.Stuff(bM,cX,{"shield":true}),new whatwentwrong.Stuff(bP,cX,{"damage":cV})],"Kethelneshi Plebeian":[new whatwentwrong.Stuff(cB,cX),new whatwentwrong.Stuff(cR,cX),new whatwentwrong.Stuff(bP,cX,{"damage":cV})],"Arcology Fugitive":[new whatwentwrong.Stuff(e,cX),new whatwentwrong.Stuff(q,cW),new whatwentwrong.Stuff(a,cW),new whatwentwrong.Stuff(cn,cX)]},deckostuff:[new whatwentwrong.Stuff(k,5),new whatwentwrong.Stuff(H,cW),new whatwentwrong.Stuff(ct,cW),new whatwentwrong.Stuff(ba,cX),new whatwentwrong.Stuff(cr,cX),new whatwentwrong.Stuff(dq,cX),new whatwentwrong.Stuff(bc,cW),new whatwentwrong.Stuff(dm,cX),new whatwentwrong.Stuff(bm,cW),new whatwentwrong.Stuff(ch,cW),new whatwentwrong.Stuff(bY,cW),new whatwentwrong.Stuff(db,cW),new whatwentwrong.Stuff(r,cW),new whatwentwrong.Stuff(d,cW),new whatwentwrong.Stuff(bp,cX),new whatwentwrong.Stuff(bg,cW,{"breakable":true}),new whatwentwrong.Stuff(bk,cX),new whatwentwrong.Stuff(dc,cX),new whatwentwrong.Stuff(bo,cW),new whatwentwrong.Stuff(bv,cW),new whatwentwrong.Stuff(cj,cX),new whatwentwrong.Stuff(cl,cX),new whatwentwrong.Stuff(cm,cW),new whatwentwrong.Stuff(bT,cW),new whatwentwrong.Stuff(bd,cW),new whatwentwrong.Stuff(D,cW),new whatwentwrong.Stuff(bn,cW),new whatwentwrong.Stuff(dn,cQ),new whatwentwrong.Stuff(cc,cW),new whatwentwrong.Stuff(co,cW),new whatwentwrong.Stuff(u,cX),new whatwentwrong.Stuff(bD,cW),new whatwentwrong.Stuff(ck,cW),new whatwentwrong.Stuff(bH,cX),new whatwentwrong.Stuff(g,cX),new whatwentwrong.Stuff(j,cX),new whatwentwrong.Stuff(R,cX),new whatwentwrong.Stuff(dk,cX),new whatwentwrong.Stuff(cv,cX,{"shield":true}),new whatwentwrong.Stuff(V,cW,{"damage":cV}),new whatwentwrong.Stuff(bW,cX,{"breakable":true}),new whatwentwrong.Stuff(bx,cW,{"damage":cT}),new whatwentwrong.Stuff(M,cX),new whatwentwrong.Stuff(cJ,cW,{"armor":bJ}),new whatwentwrong.Stuff(I,cW),new whatwentwrong.Stuff(bh,cW),new whatwentwrong.Stuff(bz,cX,{"shield":true,"damage":cU}),new whatwentwrong.Stuff(di,cX,{"breakable":true}),new whatwentwrong.Stuff(bt,cX),new whatwentwrong.Stuff(n,cW),new whatwentwrong.Stuff(cH,cW),new whatwentwrong.Stuff(Q,cX),new whatwentwrong.Stuff(ds,cQ,{"damage":cT}),new whatwentwrong.Stuff(dr,cX,{"damage":cV}),new whatwentwrong.Stuff(bF,cX,{"breakable":true})],backgrounds:[bB,cM,dw,c,dD,dd,dl,cI,cC,by,O,da,bC,m,dz,cY,br,T,cy],checkforpsionics:function(dE,dF,dG){var dH=0;
+
+if(dF==15){dH+=.01;
+}else if(dF==16){dH+=.02;
+}else if(dF==17){dH+=.03;
+}else if(dF==18){dH+=.04;
+}
+if(dG==15){dH+=.005;
+}else if(dG==16){dH+=.01;
+}else if(dG==17){dH+=.015;
+}else if(dG==18){dH+=.02;
+}
+if(dE==15){dH+=.015;
+}else if(dE==16){dH+=.03;
+}else if(dE==17){dH+=.045;
+}else if(dE==18){dH+=.06;
+}return this.chanceroll(dH);
+},chanceroll:function(dI){var dJ=Math.random();
+return (dJ<=dI);
+},dieroll:function(dK,dL){if(!dL){dL=1;
+}var dM=0;
+
+for(var i=0;i<dL;i++){var dN=Math.ceil(Math.random()*dK);
+dM+=dN;
+}return dM;
+},select:function(dO){var dP=Math.floor(Math.random()*dO.length);
+return dO[dP];
 }}});
 })();
 (function(){var n="_applyLayoutChange",m="top",k="left",j="middle",h="Decorator",g="center",f="_applyReversed",e="bottom",d="qx.ui.layout.VBox",c="Integer",a="right",b="Boolean";
