@@ -272,7 +272,7 @@ qx.Class.define("whatwentwrong.Character", {
                 this.setINT(table.dieroll(6, 3));
                 this.setSTR(table.dieroll(6, 3));
                 this.setWIS(table.dieroll(6, 3));
-                totalmod = this.getCHAmod() + this.getCONmod() + this.getDEXmod() + this.getINTmod() + this.getSTRmod() + this.getWIS();
+                totalmod = this.getCHAmod() + this.getCONmod() + this.getDEXmod() + this.getINTmod() + this.getSTRmod() + this.getWISmod();
             }
         },
         getAC: function() {
